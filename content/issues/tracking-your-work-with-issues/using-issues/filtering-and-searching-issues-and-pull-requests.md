@@ -216,9 +216,10 @@ With issue and pull request search terms, you can:
 * Filter out search terms by using `-` before the term: `state:open is:issue -author:octocat`
 
 > [!TIP]
-> You can filter issues by label using logical OR or using logical AND.
-> * To filter issues using logical OR, use the comma syntax: `label:"bug","wip"`.
-> * To filter issues using logical AND, use separate label filters: `label:"bug" label:"wip"`.
+> * You can filter issues by label using logical OR or using logical AND.
+>   * To filter issues using logical OR, use the comma syntax: `label:"bug","wip"`.
+>   * To filter issues using logical AND, use separate label filters: `label:"bug" label:"wip"`.
+> * You can use `@copilot` with qualifiers like `assignee:` and `author:` to search for issues and pull requests assigned to or authored by {% data variables.product.prodname_copilot_short %}. For example, `assignee:@copilot` or `author:@copilot`.
 
 For issues, you can also use search to:
 
@@ -241,6 +242,9 @@ For pull requests, you can also use search to:
 * Filter pull requests that someone has asked you directly to review: `state:open is:pr user-review-requested:@me`
 * Filter pull requests by the team requested for review: `state:open is:pr team-review-requested:github/docs`
 * Filter for pull requests that are linked to an issue that the pull request may close: `linked:issue`
+* Filter pull requests where all statuses are successful: `status:success`
+* Filter pull requests with at least one error or failure status: `status:failure`
+* Filter pull requests with no statuses or at least one status in the pending state: `status:pending`
 * Filter pull requests by state of [merging](/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/about-pull-request-merges): `is:merged` or `is:unmerged`
 
 ## Sorting issues and pull requests

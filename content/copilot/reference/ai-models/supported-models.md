@@ -37,8 +37,6 @@ For all of the default AI models, input prompts and output completions run throu
 
 This table lists the AI models available in {% data variables.product.prodname_copilot_short %}, along with their release status and availability in different modes.
 
-{% data reusables.copilot.grok-promo-period %}
-
 {% rowheaders %}
 
 | Model name                                             | Provider  | Release status             | Agent mode | Ask mode | Edit mode |
@@ -51,11 +49,11 @@ This table lists the AI models available in {% data variables.product.prodname_c
 
 ## Model retirement history
 
-The following table lists AI models that have been retired from {% data variables.product.prodname_copilot_short %}, along with their retirement dates and suggested alternatives.
+The following table lists AI models that are retired or scheduled for retirement from {% data variables.product.prodname_copilot_short %}, along with their retirement dates and suggested alternatives.
 
 {% rowheaders %}
 
-| Model name                                                  | Retired date                | Suggested alternative             |
+| Model name                                                  | Retirement date             | Suggested alternative             |
 |-------------------------------------------------------------|-----------------------------|-----------------------------------|
 | {% for model in tables.copilot.model-deprecation-history %} |
 | {{ model.name }}                                            | {{ model.retirement_date }} | {{ model.suggested_alternative }} |
@@ -93,6 +91,8 @@ The following table shows which AI models are available in each {% data variable
 {% data reusables.copilot.available-models-per-plan %}
 
 ## Model multipliers
+
+{% data reusables.copilot.sonnet-46-model-multiplier-note %}
 
 Each model has a premium request multiplier, based on its complexity and resource usage. If you are on a paid {% data variables.product.prodname_copilot_short %} plan, your premium request allowance is deducted according to this multiplier.
 

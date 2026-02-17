@@ -16,6 +16,7 @@ import {
 import handleErrors from '@/observability/middleware/handle-errors'
 import handleNextDataPath from './handle-next-data-path'
 import detectLanguage from '@/languages/middleware/detect-language'
+import detectVersion from '@/versions/middleware/detect-version'
 import reloadTree from './reload-tree'
 import context from './context/context'
 import shortVersions from '@/versions/middleware/short-versions'
@@ -44,7 +45,7 @@ import currentProductTree from './context/current-product-tree'
 import genericToc from './context/generic-toc'
 import breadcrumbs from './context/breadcrumbs'
 import glossaries from './context/glossaries'
-import resolveRecommended from './resolve-recommended'
+import resolveCarousels from './resolve-carousels'
 import renderProductName from './context/render-product-name'
 import features from '@/versions/middleware/features'
 import productExamples from './context/product-examples'
@@ -213,6 +214,7 @@ export default function index(app: Express) {
   // *** Config and context for redirects ***
   app.use(urlDecode) // Must come before detectLanguage to decode @ symbols in version segments
   app.use(detectLanguage) // Must come before context, breadcrumbs, find-page, handle-errors, homepages
+  app.use(detectVersion) // Must come before handle-redirects for version cookie support
   app.use(asyncMiddleware(reloadTree)) // Must come before context
   app.use(asyncMiddleware(context)) // Must come before early-access-*, handle-redirects
   app.use(shortVersions) // Support version shorthands
@@ -279,7 +281,7 @@ export default function index(app: Express) {
   app.use(asyncMiddleware(glossaries))
   app.use(asyncMiddleware(generalSearchMiddleware))
   app.use(asyncMiddleware(featuredLinks))
-  app.use(asyncMiddleware(resolveRecommended))
+  app.use(asyncMiddleware(resolveCarousels))
   app.use(asyncMiddleware(learningTrack))
   app.use(asyncMiddleware(journeyTrack))
 

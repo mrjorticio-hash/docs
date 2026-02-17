@@ -2503,6 +2503,11 @@
                     },
                     {
                       "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": ""
+                    },
+                    {
+                      "type": "boolean",
                       "name": "archived",
                       "description": ""
                     },
@@ -2645,7 +2650,7 @@
                           "description": ""
                         },
                         {
-                          "type": "string",
+                          "type": "string or null",
                           "name": "url",
                           "description": ""
                         },
@@ -2785,6 +2790,22 @@
                         {
                           "type": "object",
                           "name": "secret_scanning_ai_detection",
+                          "description": "",
+                          "childParamsGroups": [
+                            {
+                              "type": "string",
+                              "name": "status",
+                              "description": "",
+                              "enum": [
+                                "enabled",
+                                "disabled"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "name": "secret_scanning_delegated_alert_dismissal",
                           "description": "",
                           "childParamsGroups": [
                             {
@@ -4565,6 +4586,11 @@
                     },
                     {
                       "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": ""
+                    },
+                    {
+                      "type": "boolean",
                       "name": "archived",
                       "description": ""
                     },
@@ -4707,7 +4733,7 @@
                           "description": ""
                         },
                         {
-                          "type": "string",
+                          "type": "string or null",
                           "name": "url",
                           "description": ""
                         },
@@ -4847,6 +4873,22 @@
                         {
                           "type": "object",
                           "name": "secret_scanning_ai_detection",
+                          "description": "",
+                          "childParamsGroups": [
+                            {
+                              "type": "string",
+                              "name": "status",
+                              "description": "",
+                              "enum": [
+                                "enabled",
+                                "disabled"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "name": "secret_scanning_delegated_alert_dismissal",
                           "description": "",
                           "childParamsGroups": [
                             {
@@ -6628,6 +6670,11 @@
                     },
                     {
                       "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": ""
+                    },
+                    {
+                      "type": "boolean",
                       "name": "archived",
                       "description": ""
                     },
@@ -6770,7 +6817,7 @@
                           "description": ""
                         },
                         {
-                          "type": "string",
+                          "type": "string or null",
                           "name": "url",
                           "description": ""
                         },
@@ -6910,6 +6957,22 @@
                         {
                           "type": "object",
                           "name": "secret_scanning_ai_detection",
+                          "description": "",
+                          "childParamsGroups": [
+                            {
+                              "type": "string",
+                              "name": "status",
+                              "description": "",
+                              "enum": [
+                                "enabled",
+                                "disabled"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "name": "secret_scanning_delegated_alert_dismissal",
                           "description": "",
                           "childParamsGroups": [
                             {
@@ -8703,6 +8766,11 @@
                     },
                     {
                       "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": ""
+                    },
+                    {
+                      "type": "boolean",
                       "name": "archived",
                       "description": ""
                     },
@@ -8845,7 +8913,7 @@
                           "description": ""
                         },
                         {
-                          "type": "string",
+                          "type": "string or null",
                           "name": "url",
                           "description": ""
                         },
@@ -8985,6 +9053,22 @@
                         {
                           "type": "object",
                           "name": "secret_scanning_ai_detection",
+                          "description": "",
+                          "childParamsGroups": [
+                            {
+                              "type": "string",
+                              "name": "status",
+                              "description": "",
+                              "enum": [
+                                "enabled",
+                                "disabled"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "name": "secret_scanning_delegated_alert_dismissal",
                           "description": "",
                           "childParamsGroups": [
                             {
@@ -9916,15 +10000,6 @@
                     {
                       "type": "string",
                       "name": "statuses",
-                      "description": "",
-                      "enum": [
-                        "read",
-                        "write"
-                      ]
-                    },
-                    {
-                      "type": "string",
-                      "name": "team_discussions",
                       "description": "",
                       "enum": [
                         "read",
@@ -10876,15 +10951,6 @@
                     },
                     {
                       "type": "string",
-                      "name": "team_discussions",
-                      "description": "",
-                      "enum": [
-                        "read",
-                        "write"
-                      ]
-                    },
-                    {
-                      "type": "string",
                       "name": "vulnerability_alerts",
                       "description": "",
                       "enum": [
@@ -11818,15 +11884,6 @@
                     {
                       "type": "string",
                       "name": "statuses",
-                      "description": "",
-                      "enum": [
-                        "read",
-                        "write"
-                      ]
-                    },
-                    {
-                      "type": "string",
-                      "name": "team_discussions",
                       "description": "",
                       "enum": [
                         "read",
@@ -22677,15 +22734,6 @@
                     },
                     {
                       "type": "string",
-                      "name": "team_discussions",
-                      "description": "",
-                      "enum": [
-                        "read",
-                        "write"
-                      ]
-                    },
-                    {
-                      "type": "string",
                       "name": "vulnerability_alerts",
                       "description": "",
                       "enum": [
@@ -26129,6 +26177,12 @@
                     },
                     {
                       "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
+                      "type": "boolean",
                       "name": "archived",
                       "description": "<p>Whether the repository is archived.</p>",
                       "isRequired": true,
@@ -27093,6 +27147,12 @@
                       "name": "has_discussions",
                       "description": "<p>Whether discussions are enabled.</p>",
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "boolean",
@@ -33711,15 +33771,6 @@
                     },
                     {
                       "type": "string",
-                      "name": "team_discussions",
-                      "description": "",
-                      "enum": [
-                        "read",
-                        "write"
-                      ]
-                    },
-                    {
-                      "type": "string",
                       "name": "vulnerability_alerts",
                       "description": "",
                       "enum": [
@@ -34447,15 +34498,6 @@
                     {
                       "type": "string",
                       "name": "statuses",
-                      "description": "",
-                      "enum": [
-                        "read",
-                        "write"
-                      ]
-                    },
-                    {
-                      "type": "string",
-                      "name": "team_discussions",
                       "description": "",
                       "enum": [
                         "read",
@@ -44019,6 +44061,12 @@
                   "name": "has_discussions",
                   "description": "<p>Whether discussions are enabled.</p>",
                   "default": false
+                },
+                {
+                  "type": "boolean",
+                  "name": "has_pull_requests",
+                  "description": "<p>Whether pull requests are enabled.</p>",
+                  "default": true
                 },
                 {
                   "type": "boolean",
@@ -55564,6 +55612,1980 @@
       ],
       "action": "edited",
       "category": "issue_comment"
+    },
+    "pinned": {
+      "descriptionHtml": "<p>A comment on an issue was pinned.</p>",
+      "summaryHtml": "<p>This event occurs when there is activity relating to a comment on an issue or pull request. For more information about issues and pull requests, see \"<a href=\"https://docs.github.com/issues/tracking-your-work-with-issues/about-issues\">About issues</a>\" and \"<a href=\"https://docs.github.com/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests\">About pull requests</a>.\" For information about the APIs to manage issue comments, see <a href=\"https://docs.github.com/graphql/reference/objects#issuecomment\">the GraphQL documentation</a> or \"<a href=\"https://docs.github.com/rest/issues/comments\">Issue comments</a>\" in the REST API documentation.</p>\n<p>For activity relating to an issue as opposed to comments on an issue, use the <code>issue</code> event. For activity related to pull request reviews or pull request review comments, use the <code>pull_request_review</code> or <code>pull_request_review_comment</code> events. For more information about the different types of pull request comments, see \"<a href=\"https://docs.github.com/rest/guides/working-with-comments\">Working with comments</a>.\"</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Issues\" repository permission.</p>",
+      "bodyParameters": [
+        {
+          "type": "string",
+          "name": "action",
+          "in": "body",
+          "description": "",
+          "isRequired": true,
+          "enum": [
+            "pinned"
+          ],
+          "childParamsGroups": []
+        },
+        {
+          "type": "object",
+          "name": "comment",
+          "in": "body",
+          "description": "<p>The <a href=\"https://docs.github.com/rest/issues/comments#get-an-issue-comment\">comment</a> itself.</p>",
+          "isRequired": true,
+          "childParamsGroups": []
+        },
+        {
+          "type": "object",
+          "name": "enterprise",
+          "in": "body",
+          "description": "<p>An enterprise on GitHub. Webhook payloads contain the <code>enterprise</code> property when the webhook is configured\non an enterprise account or an organization that's part of an enterprise account. For more information,\nsee \"<a href=\"https://docs.github.com/admin/overview/about-enterprise-accounts\">About enterprise accounts</a>.\"</p>",
+          "childParamsGroups": []
+        },
+        {
+          "type": "object",
+          "name": "installation",
+          "in": "body",
+          "description": "<p>The GitHub App installation. Webhook payloads contain the <code>installation</code> property when the event is configured\nfor and sent to a GitHub App. For more information,\nsee \"<a href=\"https://docs.github.com/apps/creating-github-apps/registering-a-github-app/using-webhooks-with-github-apps\">Using webhooks with GitHub Apps</a>.\"</p>",
+          "childParamsGroups": []
+        },
+        {
+          "type": "object",
+          "name": "issue",
+          "in": "body",
+          "description": "<p>The <a href=\"https://docs.github.com/rest/issues/issues#get-an-issue\">issue</a> the comment belongs to.</p>",
+          "isRequired": true,
+          "childParamsGroups": [
+            {
+              "type": "string or null",
+              "name": "active_lock_reason",
+              "description": "",
+              "isRequired": true,
+              "enum": [
+                "resolved",
+                "off-topic",
+                "too heated",
+                "spam",
+                null
+              ]
+            },
+            {
+              "type": "object or null",
+              "name": "assignee",
+              "description": "",
+              "isRequired": true,
+              "childParamsGroups": [
+                {
+                  "type": "string",
+                  "name": "avatar_url",
+                  "description": ""
+                },
+                {
+                  "type": "boolean",
+                  "name": "deleted",
+                  "description": ""
+                },
+                {
+                  "type": "string or null",
+                  "name": "email",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "events_url",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "followers_url",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "following_url",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "gists_url",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "gravatar_id",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "html_url",
+                  "description": ""
+                },
+                {
+                  "type": "integer",
+                  "name": "id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "login",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "name",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "node_id",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "organizations_url",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "received_events_url",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "repos_url",
+                  "description": ""
+                },
+                {
+                  "type": "boolean",
+                  "name": "site_admin",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "starred_url",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "subscriptions_url",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "type",
+                  "description": "",
+                  "enum": [
+                    "Bot",
+                    "User",
+                    "Organization",
+                    "Mannequin"
+                  ]
+                },
+                {
+                  "type": "string",
+                  "name": "url",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "user_view_type",
+                  "description": ""
+                }
+              ]
+            },
+            {
+              "type": "array of object,nulls",
+              "name": "assignees",
+              "description": "",
+              "isRequired": true
+            },
+            {
+              "type": "string",
+              "name": "author_association",
+              "description": "<p>How the author is associated with the repository.</p>",
+              "isRequired": true,
+              "enum": [
+                "COLLABORATOR",
+                "CONTRIBUTOR",
+                "FIRST_TIMER",
+                "FIRST_TIME_CONTRIBUTOR",
+                "MANNEQUIN",
+                "MEMBER",
+                "NONE",
+                "OWNER"
+              ]
+            },
+            {
+              "type": "string or null",
+              "name": "body",
+              "description": "<p>Contents of the issue</p>",
+              "isRequired": true
+            },
+            {
+              "type": "string or null",
+              "name": "closed_at",
+              "description": "",
+              "isRequired": true
+            },
+            {
+              "type": "integer",
+              "name": "comments",
+              "description": "",
+              "isRequired": true
+            },
+            {
+              "type": "string",
+              "name": "comments_url",
+              "description": "",
+              "isRequired": true
+            },
+            {
+              "type": "string",
+              "name": "created_at",
+              "description": "",
+              "isRequired": true
+            },
+            {
+              "type": "boolean",
+              "name": "draft",
+              "description": ""
+            },
+            {
+              "type": "string",
+              "name": "events_url",
+              "description": "",
+              "isRequired": true
+            },
+            {
+              "type": "string",
+              "name": "html_url",
+              "description": "",
+              "isRequired": true
+            },
+            {
+              "type": "integer",
+              "name": "id",
+              "description": "",
+              "isRequired": true
+            },
+            {
+              "type": "array of objects",
+              "name": "labels",
+              "description": "",
+              "isRequired": true,
+              "childParamsGroups": [
+                {
+                  "type": "string",
+                  "name": "color",
+                  "description": "<p>6-character hex code, without the leading #, identifying the color</p>",
+                  "isRequired": true
+                },
+                {
+                  "type": "boolean",
+                  "name": "default",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string or null",
+                  "name": "description",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "name",
+                  "description": "<p>The name of the label.</p>",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "node_id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "url",
+                  "description": "<p>URL for the label</p>",
+                  "isRequired": true
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "name": "labels_url",
+              "description": "",
+              "isRequired": true
+            },
+            {
+              "type": "boolean",
+              "name": "locked",
+              "description": "",
+              "isRequired": true
+            },
+            {
+              "type": "object or null",
+              "name": "milestone",
+              "description": "<p>A collection of related issues and pull requests.</p>",
+              "isRequired": true,
+              "childParamsGroups": [
+                {
+                  "type": "string or null",
+                  "name": "closed_at",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "closed_issues",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "created_at",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "object or null",
+                  "name": "creator",
+                  "description": "",
+                  "isRequired": true,
+                  "childParamsGroups": [
+                    {
+                      "type": "string",
+                      "name": "avatar_url",
+                      "description": ""
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "deleted",
+                      "description": ""
+                    },
+                    {
+                      "type": "string or null",
+                      "name": "email",
+                      "description": ""
+                    },
+                    {
+                      "type": "string",
+                      "name": "events_url",
+                      "description": ""
+                    },
+                    {
+                      "type": "string",
+                      "name": "followers_url",
+                      "description": ""
+                    },
+                    {
+                      "type": "string",
+                      "name": "following_url",
+                      "description": ""
+                    },
+                    {
+                      "type": "string",
+                      "name": "gists_url",
+                      "description": ""
+                    },
+                    {
+                      "type": "string",
+                      "name": "gravatar_id",
+                      "description": ""
+                    },
+                    {
+                      "type": "string",
+                      "name": "html_url",
+                      "description": ""
+                    },
+                    {
+                      "type": "integer",
+                      "name": "id",
+                      "description": "",
+                      "isRequired": true
+                    },
+                    {
+                      "type": "string",
+                      "name": "login",
+                      "description": "",
+                      "isRequired": true
+                    },
+                    {
+                      "type": "string",
+                      "name": "name",
+                      "description": ""
+                    },
+                    {
+                      "type": "string",
+                      "name": "node_id",
+                      "description": ""
+                    },
+                    {
+                      "type": "string",
+                      "name": "organizations_url",
+                      "description": ""
+                    },
+                    {
+                      "type": "string",
+                      "name": "received_events_url",
+                      "description": ""
+                    },
+                    {
+                      "type": "string",
+                      "name": "repos_url",
+                      "description": ""
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "site_admin",
+                      "description": ""
+                    },
+                    {
+                      "type": "string",
+                      "name": "starred_url",
+                      "description": ""
+                    },
+                    {
+                      "type": "string",
+                      "name": "subscriptions_url",
+                      "description": ""
+                    },
+                    {
+                      "type": "string",
+                      "name": "type",
+                      "description": "",
+                      "enum": [
+                        "Bot",
+                        "User",
+                        "Organization",
+                        "Mannequin"
+                      ]
+                    },
+                    {
+                      "type": "string",
+                      "name": "url",
+                      "description": ""
+                    },
+                    {
+                      "type": "string",
+                      "name": "user_view_type",
+                      "description": ""
+                    }
+                  ]
+                },
+                {
+                  "type": "string or null",
+                  "name": "description",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string or null",
+                  "name": "due_on",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "html_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "labels_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "node_id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "number",
+                  "description": "<p>The number of the milestone.</p>",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "open_issues",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "state",
+                  "description": "<p>The state of the milestone.</p>",
+                  "isRequired": true,
+                  "enum": [
+                    "open",
+                    "closed"
+                  ]
+                },
+                {
+                  "type": "string",
+                  "name": "title",
+                  "description": "<p>The title of the milestone.</p>",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "updated_at",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "url",
+                  "description": "",
+                  "isRequired": true
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "name": "node_id",
+              "description": "",
+              "isRequired": true
+            },
+            {
+              "type": "integer",
+              "name": "number",
+              "description": "",
+              "isRequired": true
+            },
+            {
+              "type": "object or null",
+              "name": "performed_via_github_app",
+              "description": ""
+            },
+            {
+              "type": "object",
+              "name": "pull_request",
+              "description": "",
+              "childParamsGroups": [
+                {
+                  "type": "string",
+                  "name": "diff_url",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "html_url",
+                  "description": ""
+                },
+                {
+                  "type": "string or null",
+                  "name": "merged_at",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "patch_url",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "url",
+                  "description": ""
+                }
+              ]
+            },
+            {
+              "type": "object",
+              "name": "reactions",
+              "description": "",
+              "isRequired": true,
+              "childParamsGroups": [
+                {
+                  "type": "integer",
+                  "name": "+1",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "-1",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "confused",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "eyes",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "heart",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "hooray",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "laugh",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "rocket",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "total_count",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "url",
+                  "description": "",
+                  "isRequired": true
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "name": "repository_url",
+              "description": "",
+              "isRequired": true
+            },
+            {
+              "type": "object",
+              "name": "sub_issues_summary",
+              "description": "",
+              "childParamsGroups": [
+                {
+                  "type": "integer",
+                  "name": "total",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "completed",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "percent_completed",
+                  "description": "",
+                  "isRequired": true
+                }
+              ]
+            },
+            {
+              "type": "object",
+              "name": "issue_dependencies_summary",
+              "description": "",
+              "childParamsGroups": [
+                {
+                  "type": "integer",
+                  "name": "blocked_by",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "blocking",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "total_blocked_by",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "total_blocking",
+                  "description": "",
+                  "isRequired": true
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "name": "state",
+              "description": "<p>State of the issue; either 'open' or 'closed'</p>",
+              "isRequired": true,
+              "enum": [
+                "open",
+                "closed"
+              ]
+            },
+            {
+              "type": "string or null",
+              "name": "state_reason",
+              "description": ""
+            },
+            {
+              "type": "string",
+              "name": "timeline_url",
+              "description": ""
+            },
+            {
+              "type": "string",
+              "name": "title",
+              "description": "<p>Title of the issue</p>",
+              "isRequired": true
+            },
+            {
+              "type": "object or null",
+              "name": "type",
+              "description": "<p>The type of issue.</p>",
+              "childParamsGroups": [
+                {
+                  "type": "integer",
+                  "name": "id",
+                  "description": "<p>The unique identifier of the issue type.</p>",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "node_id",
+                  "description": "<p>The node identifier of the issue type.</p>",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "name",
+                  "description": "<p>The name of the issue type.</p>",
+                  "isRequired": true
+                },
+                {
+                  "type": "string or null",
+                  "name": "description",
+                  "description": "<p>The description of the issue type.</p>",
+                  "isRequired": true
+                },
+                {
+                  "type": "string or null",
+                  "name": "color",
+                  "description": "<p>The color of the issue type.</p>",
+                  "enum": [
+                    "gray",
+                    "blue",
+                    "green",
+                    "yellow",
+                    "orange",
+                    "red",
+                    "pink",
+                    "purple",
+                    null
+                  ]
+                },
+                {
+                  "type": "string",
+                  "name": "created_at",
+                  "description": "<p>The time the issue type created.</p>"
+                },
+                {
+                  "type": "string",
+                  "name": "updated_at",
+                  "description": "<p>The time the issue type last updated.</p>"
+                },
+                {
+                  "type": "boolean",
+                  "name": "is_enabled",
+                  "description": "<p>The enabled state of the issue type.</p>"
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "name": "updated_at",
+              "description": "",
+              "isRequired": true
+            },
+            {
+              "type": "string",
+              "name": "url",
+              "description": "<p>URL for the issue</p>",
+              "isRequired": true
+            },
+            {
+              "type": "object or null",
+              "name": "user",
+              "description": "",
+              "isRequired": true,
+              "childParamsGroups": [
+                {
+                  "type": "string",
+                  "name": "avatar_url",
+                  "description": ""
+                },
+                {
+                  "type": "boolean",
+                  "name": "deleted",
+                  "description": ""
+                },
+                {
+                  "type": "string or null",
+                  "name": "email",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "events_url",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "followers_url",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "following_url",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "gists_url",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "gravatar_id",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "html_url",
+                  "description": ""
+                },
+                {
+                  "type": "integer",
+                  "name": "id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "login",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "name",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "node_id",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "organizations_url",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "received_events_url",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "repos_url",
+                  "description": ""
+                },
+                {
+                  "type": "boolean",
+                  "name": "site_admin",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "starred_url",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "subscriptions_url",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "type",
+                  "description": "",
+                  "enum": [
+                    "Bot",
+                    "User",
+                    "Organization",
+                    "Mannequin"
+                  ]
+                },
+                {
+                  "type": "string",
+                  "name": "url",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "user_view_type",
+                  "description": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "object",
+          "name": "organization",
+          "in": "body",
+          "description": "<p>A GitHub organization. Webhook payloads contain the <code>organization</code> property when the webhook is configured for an\norganization, or when the event occurs from activity in a repository owned by an organization.</p>",
+          "childParamsGroups": []
+        },
+        {
+          "type": "object",
+          "name": "repository",
+          "in": "body",
+          "description": "<p>The repository on GitHub where the event occurred. Webhook payloads contain the <code>repository</code> property\nwhen the event occurs from activity in a repository.</p>",
+          "isRequired": true,
+          "childParamsGroups": []
+        },
+        {
+          "type": "object",
+          "name": "sender",
+          "in": "body",
+          "description": "<p>A GitHub user.</p>",
+          "isRequired": true,
+          "childParamsGroups": []
+        }
+      ],
+      "availability": [
+        "repository",
+        "organization",
+        "app"
+      ],
+      "action": "pinned",
+      "category": "issue_comment"
+    },
+    "unpinned": {
+      "descriptionHtml": "<p>A comment on an issue was unpinned.</p>",
+      "summaryHtml": "<p>This event occurs when there is activity relating to a comment on an issue or pull request. For more information about issues and pull requests, see \"<a href=\"https://docs.github.com/issues/tracking-your-work-with-issues/about-issues\">About issues</a>\" and \"<a href=\"https://docs.github.com/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests\">About pull requests</a>.\" For information about the APIs to manage issue comments, see <a href=\"https://docs.github.com/graphql/reference/objects#issuecomment\">the GraphQL documentation</a> or \"<a href=\"https://docs.github.com/rest/issues/comments\">Issue comments</a>\" in the REST API documentation.</p>\n<p>For activity relating to an issue as opposed to comments on an issue, use the <code>issue</code> event. For activity related to pull request reviews or pull request review comments, use the <code>pull_request_review</code> or <code>pull_request_review_comment</code> events. For more information about the different types of pull request comments, see \"<a href=\"https://docs.github.com/rest/guides/working-with-comments\">Working with comments</a>.\"</p>\n<p>To subscribe to this event, a GitHub App must have at least read-level access for the \"Issues\" repository permission.</p>",
+      "bodyParameters": [
+        {
+          "type": "string",
+          "name": "action",
+          "in": "body",
+          "description": "",
+          "isRequired": true,
+          "enum": [
+            "unpinned"
+          ],
+          "childParamsGroups": []
+        },
+        {
+          "type": "object",
+          "name": "comment",
+          "in": "body",
+          "description": "<p>The <a href=\"https://docs.github.com/rest/issues/comments#get-an-issue-comment\">comment</a> itself.</p>",
+          "isRequired": true,
+          "childParamsGroups": []
+        },
+        {
+          "type": "object",
+          "name": "enterprise",
+          "in": "body",
+          "description": "<p>An enterprise on GitHub. Webhook payloads contain the <code>enterprise</code> property when the webhook is configured\non an enterprise account or an organization that's part of an enterprise account. For more information,\nsee \"<a href=\"https://docs.github.com/admin/overview/about-enterprise-accounts\">About enterprise accounts</a>.\"</p>",
+          "childParamsGroups": []
+        },
+        {
+          "type": "object",
+          "name": "installation",
+          "in": "body",
+          "description": "<p>The GitHub App installation. Webhook payloads contain the <code>installation</code> property when the event is configured\nfor and sent to a GitHub App. For more information,\nsee \"<a href=\"https://docs.github.com/apps/creating-github-apps/registering-a-github-app/using-webhooks-with-github-apps\">Using webhooks with GitHub Apps</a>.\"</p>",
+          "childParamsGroups": []
+        },
+        {
+          "type": "object",
+          "name": "issue",
+          "in": "body",
+          "description": "<p>The <a href=\"https://docs.github.com/rest/issues/issues#get-an-issue\">issue</a> the comment belongs to.</p>",
+          "isRequired": true,
+          "childParamsGroups": [
+            {
+              "type": "string or null",
+              "name": "active_lock_reason",
+              "description": "",
+              "isRequired": true,
+              "enum": [
+                "resolved",
+                "off-topic",
+                "too heated",
+                "spam",
+                null
+              ]
+            },
+            {
+              "type": "object or null",
+              "name": "assignee",
+              "description": "",
+              "isRequired": true,
+              "childParamsGroups": [
+                {
+                  "type": "string",
+                  "name": "avatar_url",
+                  "description": ""
+                },
+                {
+                  "type": "boolean",
+                  "name": "deleted",
+                  "description": ""
+                },
+                {
+                  "type": "string or null",
+                  "name": "email",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "events_url",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "followers_url",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "following_url",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "gists_url",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "gravatar_id",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "html_url",
+                  "description": ""
+                },
+                {
+                  "type": "integer",
+                  "name": "id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "login",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "name",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "node_id",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "organizations_url",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "received_events_url",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "repos_url",
+                  "description": ""
+                },
+                {
+                  "type": "boolean",
+                  "name": "site_admin",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "starred_url",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "subscriptions_url",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "type",
+                  "description": "",
+                  "enum": [
+                    "Bot",
+                    "User",
+                    "Organization",
+                    "Mannequin"
+                  ]
+                },
+                {
+                  "type": "string",
+                  "name": "url",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "user_view_type",
+                  "description": ""
+                }
+              ]
+            },
+            {
+              "type": "array of object,nulls",
+              "name": "assignees",
+              "description": "",
+              "isRequired": true
+            },
+            {
+              "type": "string",
+              "name": "author_association",
+              "description": "<p>How the author is associated with the repository.</p>",
+              "isRequired": true,
+              "enum": [
+                "COLLABORATOR",
+                "CONTRIBUTOR",
+                "FIRST_TIMER",
+                "FIRST_TIME_CONTRIBUTOR",
+                "MANNEQUIN",
+                "MEMBER",
+                "NONE",
+                "OWNER"
+              ]
+            },
+            {
+              "type": "string or null",
+              "name": "body",
+              "description": "<p>Contents of the issue</p>",
+              "isRequired": true
+            },
+            {
+              "type": "string or null",
+              "name": "closed_at",
+              "description": "",
+              "isRequired": true
+            },
+            {
+              "type": "integer",
+              "name": "comments",
+              "description": "",
+              "isRequired": true
+            },
+            {
+              "type": "string",
+              "name": "comments_url",
+              "description": "",
+              "isRequired": true
+            },
+            {
+              "type": "string",
+              "name": "created_at",
+              "description": "",
+              "isRequired": true
+            },
+            {
+              "type": "boolean",
+              "name": "draft",
+              "description": ""
+            },
+            {
+              "type": "string",
+              "name": "events_url",
+              "description": "",
+              "isRequired": true
+            },
+            {
+              "type": "string",
+              "name": "html_url",
+              "description": "",
+              "isRequired": true
+            },
+            {
+              "type": "integer",
+              "name": "id",
+              "description": "",
+              "isRequired": true
+            },
+            {
+              "type": "array of objects",
+              "name": "labels",
+              "description": "",
+              "isRequired": true,
+              "childParamsGroups": [
+                {
+                  "type": "string",
+                  "name": "color",
+                  "description": "<p>6-character hex code, without the leading #, identifying the color</p>",
+                  "isRequired": true
+                },
+                {
+                  "type": "boolean",
+                  "name": "default",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string or null",
+                  "name": "description",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "name",
+                  "description": "<p>The name of the label.</p>",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "node_id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "url",
+                  "description": "<p>URL for the label</p>",
+                  "isRequired": true
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "name": "labels_url",
+              "description": "",
+              "isRequired": true
+            },
+            {
+              "type": "boolean",
+              "name": "locked",
+              "description": "",
+              "isRequired": true
+            },
+            {
+              "type": "object or null",
+              "name": "milestone",
+              "description": "<p>A collection of related issues and pull requests.</p>",
+              "isRequired": true,
+              "childParamsGroups": [
+                {
+                  "type": "string or null",
+                  "name": "closed_at",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "closed_issues",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "created_at",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "object or null",
+                  "name": "creator",
+                  "description": "",
+                  "isRequired": true,
+                  "childParamsGroups": [
+                    {
+                      "type": "string",
+                      "name": "avatar_url",
+                      "description": ""
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "deleted",
+                      "description": ""
+                    },
+                    {
+                      "type": "string or null",
+                      "name": "email",
+                      "description": ""
+                    },
+                    {
+                      "type": "string",
+                      "name": "events_url",
+                      "description": ""
+                    },
+                    {
+                      "type": "string",
+                      "name": "followers_url",
+                      "description": ""
+                    },
+                    {
+                      "type": "string",
+                      "name": "following_url",
+                      "description": ""
+                    },
+                    {
+                      "type": "string",
+                      "name": "gists_url",
+                      "description": ""
+                    },
+                    {
+                      "type": "string",
+                      "name": "gravatar_id",
+                      "description": ""
+                    },
+                    {
+                      "type": "string",
+                      "name": "html_url",
+                      "description": ""
+                    },
+                    {
+                      "type": "integer",
+                      "name": "id",
+                      "description": "",
+                      "isRequired": true
+                    },
+                    {
+                      "type": "string",
+                      "name": "login",
+                      "description": "",
+                      "isRequired": true
+                    },
+                    {
+                      "type": "string",
+                      "name": "name",
+                      "description": ""
+                    },
+                    {
+                      "type": "string",
+                      "name": "node_id",
+                      "description": ""
+                    },
+                    {
+                      "type": "string",
+                      "name": "organizations_url",
+                      "description": ""
+                    },
+                    {
+                      "type": "string",
+                      "name": "received_events_url",
+                      "description": ""
+                    },
+                    {
+                      "type": "string",
+                      "name": "repos_url",
+                      "description": ""
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "site_admin",
+                      "description": ""
+                    },
+                    {
+                      "type": "string",
+                      "name": "starred_url",
+                      "description": ""
+                    },
+                    {
+                      "type": "string",
+                      "name": "subscriptions_url",
+                      "description": ""
+                    },
+                    {
+                      "type": "string",
+                      "name": "type",
+                      "description": "",
+                      "enum": [
+                        "Bot",
+                        "User",
+                        "Organization",
+                        "Mannequin"
+                      ]
+                    },
+                    {
+                      "type": "string",
+                      "name": "url",
+                      "description": ""
+                    },
+                    {
+                      "type": "string",
+                      "name": "user_view_type",
+                      "description": ""
+                    }
+                  ]
+                },
+                {
+                  "type": "string or null",
+                  "name": "description",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string or null",
+                  "name": "due_on",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "html_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "labels_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "node_id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "number",
+                  "description": "<p>The number of the milestone.</p>",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "open_issues",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "state",
+                  "description": "<p>The state of the milestone.</p>",
+                  "isRequired": true,
+                  "enum": [
+                    "open",
+                    "closed"
+                  ]
+                },
+                {
+                  "type": "string",
+                  "name": "title",
+                  "description": "<p>The title of the milestone.</p>",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "updated_at",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "url",
+                  "description": "",
+                  "isRequired": true
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "name": "node_id",
+              "description": "",
+              "isRequired": true
+            },
+            {
+              "type": "integer",
+              "name": "number",
+              "description": "",
+              "isRequired": true
+            },
+            {
+              "type": "object or null",
+              "name": "performed_via_github_app",
+              "description": ""
+            },
+            {
+              "type": "object",
+              "name": "pull_request",
+              "description": "",
+              "childParamsGroups": [
+                {
+                  "type": "string",
+                  "name": "diff_url",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "html_url",
+                  "description": ""
+                },
+                {
+                  "type": "string or null",
+                  "name": "merged_at",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "patch_url",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "url",
+                  "description": ""
+                }
+              ]
+            },
+            {
+              "type": "object",
+              "name": "reactions",
+              "description": "",
+              "isRequired": true,
+              "childParamsGroups": [
+                {
+                  "type": "integer",
+                  "name": "+1",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "-1",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "confused",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "eyes",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "heart",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "hooray",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "laugh",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "rocket",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "total_count",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "url",
+                  "description": "",
+                  "isRequired": true
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "name": "repository_url",
+              "description": "",
+              "isRequired": true
+            },
+            {
+              "type": "object",
+              "name": "sub_issues_summary",
+              "description": "",
+              "childParamsGroups": [
+                {
+                  "type": "integer",
+                  "name": "total",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "completed",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "percent_completed",
+                  "description": "",
+                  "isRequired": true
+                }
+              ]
+            },
+            {
+              "type": "object",
+              "name": "issue_dependencies_summary",
+              "description": "",
+              "childParamsGroups": [
+                {
+                  "type": "integer",
+                  "name": "blocked_by",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "blocking",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "total_blocked_by",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "total_blocking",
+                  "description": "",
+                  "isRequired": true
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "name": "state",
+              "description": "<p>State of the issue; either 'open' or 'closed'</p>",
+              "isRequired": true,
+              "enum": [
+                "open",
+                "closed"
+              ]
+            },
+            {
+              "type": "string or null",
+              "name": "state_reason",
+              "description": ""
+            },
+            {
+              "type": "string",
+              "name": "timeline_url",
+              "description": ""
+            },
+            {
+              "type": "string",
+              "name": "title",
+              "description": "<p>Title of the issue</p>",
+              "isRequired": true
+            },
+            {
+              "type": "object or null",
+              "name": "type",
+              "description": "<p>The type of issue.</p>",
+              "childParamsGroups": [
+                {
+                  "type": "integer",
+                  "name": "id",
+                  "description": "<p>The unique identifier of the issue type.</p>",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "node_id",
+                  "description": "<p>The node identifier of the issue type.</p>",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "name",
+                  "description": "<p>The name of the issue type.</p>",
+                  "isRequired": true
+                },
+                {
+                  "type": "string or null",
+                  "name": "description",
+                  "description": "<p>The description of the issue type.</p>",
+                  "isRequired": true
+                },
+                {
+                  "type": "string or null",
+                  "name": "color",
+                  "description": "<p>The color of the issue type.</p>",
+                  "enum": [
+                    "gray",
+                    "blue",
+                    "green",
+                    "yellow",
+                    "orange",
+                    "red",
+                    "pink",
+                    "purple",
+                    null
+                  ]
+                },
+                {
+                  "type": "string",
+                  "name": "created_at",
+                  "description": "<p>The time the issue type created.</p>"
+                },
+                {
+                  "type": "string",
+                  "name": "updated_at",
+                  "description": "<p>The time the issue type last updated.</p>"
+                },
+                {
+                  "type": "boolean",
+                  "name": "is_enabled",
+                  "description": "<p>The enabled state of the issue type.</p>"
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "name": "updated_at",
+              "description": "",
+              "isRequired": true
+            },
+            {
+              "type": "string",
+              "name": "url",
+              "description": "<p>URL for the issue</p>",
+              "isRequired": true
+            },
+            {
+              "type": "object or null",
+              "name": "user",
+              "description": "",
+              "isRequired": true,
+              "childParamsGroups": [
+                {
+                  "type": "string",
+                  "name": "avatar_url",
+                  "description": ""
+                },
+                {
+                  "type": "boolean",
+                  "name": "deleted",
+                  "description": ""
+                },
+                {
+                  "type": "string or null",
+                  "name": "email",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "events_url",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "followers_url",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "following_url",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "gists_url",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "gravatar_id",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "html_url",
+                  "description": ""
+                },
+                {
+                  "type": "integer",
+                  "name": "id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "login",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "name",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "node_id",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "organizations_url",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "received_events_url",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "repos_url",
+                  "description": ""
+                },
+                {
+                  "type": "boolean",
+                  "name": "site_admin",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "starred_url",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "subscriptions_url",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "type",
+                  "description": "",
+                  "enum": [
+                    "Bot",
+                    "User",
+                    "Organization",
+                    "Mannequin"
+                  ]
+                },
+                {
+                  "type": "string",
+                  "name": "url",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "user_view_type",
+                  "description": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "object",
+          "name": "organization",
+          "in": "body",
+          "description": "<p>A GitHub organization. Webhook payloads contain the <code>organization</code> property when the webhook is configured for an\norganization, or when the event occurs from activity in a repository owned by an organization.</p>",
+          "childParamsGroups": []
+        },
+        {
+          "type": "object",
+          "name": "repository",
+          "in": "body",
+          "description": "<p>The repository on GitHub where the event occurred. Webhook payloads contain the <code>repository</code> property\nwhen the event occurs from activity in a repository.</p>",
+          "isRequired": true,
+          "childParamsGroups": []
+        },
+        {
+          "type": "object",
+          "name": "sender",
+          "in": "body",
+          "description": "<p>A GitHub user.</p>",
+          "isRequired": true,
+          "childParamsGroups": []
+        }
+      ],
+      "availability": [
+        "repository",
+        "organization",
+        "app"
+      ],
+      "action": "unpinned",
+      "category": "issue_comment"
     }
   },
   "issue_dependencies": {
@@ -57241,6 +59263,12 @@
                   "name": "has_discussions",
                   "description": "<p>Whether discussions are enabled.</p>",
                   "default": false
+                },
+                {
+                  "type": "boolean",
+                  "name": "has_pull_requests",
+                  "description": "<p>Whether pull requests are enabled.</p>",
+                  "default": true
                 },
                 {
                   "type": "boolean",
@@ -59295,6 +61323,12 @@
                 },
                 {
                   "type": "boolean",
+                  "name": "has_pull_requests",
+                  "description": "<p>Whether pull requests are enabled.</p>",
+                  "default": true
+                },
+                {
+                  "type": "boolean",
                   "name": "archived",
                   "description": "<p>Whether the repository is archived.</p>",
                   "isRequired": true,
@@ -60309,6 +62343,12 @@
               "name": "has_discussions",
               "description": "<p>Whether discussions are enabled.</p>",
               "default": false
+            },
+            {
+              "type": "boolean",
+              "name": "has_pull_requests",
+              "description": "<p>Whether pull requests are enabled.</p>",
+              "default": true
             },
             {
               "type": "boolean",
@@ -62206,6 +64246,12 @@
                 },
                 {
                   "type": "boolean",
+                  "name": "has_pull_requests",
+                  "description": "<p>Whether pull requests are enabled.</p>",
+                  "default": true
+                },
+                {
+                  "type": "boolean",
                   "name": "archived",
                   "description": "<p>Whether the repository is archived.</p>",
                   "isRequired": true,
@@ -64257,6 +66303,12 @@
                 },
                 {
                   "type": "boolean",
+                  "name": "has_pull_requests",
+                  "description": "<p>Whether pull requests are enabled.</p>",
+                  "default": true
+                },
+                {
+                  "type": "boolean",
                   "name": "archived",
                   "description": "<p>Whether the repository is archived.</p>",
                   "isRequired": true,
@@ -65271,6 +67323,12 @@
               "name": "has_discussions",
               "description": "<p>Whether discussions are enabled.</p>",
               "default": false
+            },
+            {
+              "type": "boolean",
+              "name": "has_pull_requests",
+              "description": "<p>Whether pull requests are enabled.</p>",
+              "default": true
             },
             {
               "type": "boolean",
@@ -67168,6 +69226,12 @@
                 },
                 {
                   "type": "boolean",
+                  "name": "has_pull_requests",
+                  "description": "<p>Whether pull requests are enabled.</p>",
+                  "default": true
+                },
+                {
+                  "type": "boolean",
                   "name": "archived",
                   "description": "<p>Whether the repository is archived.</p>",
                   "isRequired": true,
@@ -68182,6 +70246,12 @@
               "name": "has_discussions",
               "description": "<p>Whether discussions are enabled.</p>",
               "default": false
+            },
+            {
+              "type": "boolean",
+              "name": "has_pull_requests",
+              "description": "<p>Whether pull requests are enabled.</p>",
+              "default": true
             },
             {
               "type": "boolean",
@@ -70021,6 +72091,12 @@
                   "name": "has_discussions",
                   "description": "<p>Whether discussions are enabled.</p>",
                   "default": false
+                },
+                {
+                  "type": "boolean",
+                  "name": "has_pull_requests",
+                  "description": "<p>Whether pull requests are enabled.</p>",
+                  "default": true
                 },
                 {
                   "type": "boolean",
@@ -72130,6 +74206,12 @@
                 },
                 {
                   "type": "boolean",
+                  "name": "has_pull_requests",
+                  "description": "<p>Whether pull requests are enabled.</p>",
+                  "default": true
+                },
+                {
+                  "type": "boolean",
                   "name": "archived",
                   "description": "<p>Whether the repository is archived.</p>",
                   "isRequired": true,
@@ -73144,6 +75226,12 @@
               "name": "has_discussions",
               "description": "<p>Whether discussions are enabled.</p>",
               "default": false
+            },
+            {
+              "type": "boolean",
+              "name": "has_pull_requests",
+              "description": "<p>Whether pull requests are enabled.</p>",
+              "default": true
             },
             {
               "type": "boolean",
@@ -74986,6 +77074,12 @@
                 },
                 {
                   "type": "boolean",
+                  "name": "has_pull_requests",
+                  "description": "<p>Whether pull requests are enabled.</p>",
+                  "default": true
+                },
+                {
+                  "type": "boolean",
                   "name": "archived",
                   "description": "<p>Whether the repository is archived.</p>",
                   "isRequired": true,
@@ -76556,15 +78650,6 @@
                     {
                       "type": "string",
                       "name": "statuses",
-                      "description": "",
-                      "enum": [
-                        "read",
-                        "write"
-                      ]
-                    },
-                    {
-                      "type": "string",
-                      "name": "team_discussions",
                       "description": "",
                       "enum": [
                         "read",
@@ -78980,15 +81065,6 @@
                     },
                     {
                       "type": "string",
-                      "name": "team_discussions",
-                      "description": "",
-                      "enum": [
-                        "read",
-                        "write"
-                      ]
-                    },
-                    {
-                      "type": "string",
                       "name": "vulnerability_alerts",
                       "description": "",
                       "enum": [
@@ -80467,15 +82543,6 @@
                     {
                       "type": "string",
                       "name": "statuses",
-                      "description": "",
-                      "enum": [
-                        "read",
-                        "write"
-                      ]
-                    },
-                    {
-                      "type": "string",
-                      "name": "team_discussions",
                       "description": "",
                       "enum": [
                         "read",
@@ -82283,15 +84350,6 @@
                     },
                     {
                       "type": "string",
-                      "name": "team_discussions",
-                      "description": "",
-                      "enum": [
-                        "read",
-                        "write"
-                      ]
-                    },
-                    {
-                      "type": "string",
                       "name": "vulnerability_alerts",
                       "description": "",
                       "enum": [
@@ -83878,15 +85936,6 @@
                     },
                     {
                       "type": "string",
-                      "name": "team_discussions",
-                      "description": "",
-                      "enum": [
-                        "read",
-                        "write"
-                      ]
-                    },
-                    {
-                      "type": "string",
                       "name": "vulnerability_alerts",
                       "description": "",
                       "enum": [
@@ -85430,15 +87479,6 @@
                     },
                     {
                       "type": "string",
-                      "name": "team_discussions",
-                      "description": "",
-                      "enum": [
-                        "read",
-                        "write"
-                      ]
-                    },
-                    {
-                      "type": "string",
                       "name": "vulnerability_alerts",
                       "description": "",
                       "enum": [
@@ -86916,15 +88956,6 @@
                     {
                       "type": "string",
                       "name": "statuses",
-                      "description": "",
-                      "enum": [
-                        "read",
-                        "write"
-                      ]
-                    },
-                    {
-                      "type": "string",
-                      "name": "team_discussions",
                       "description": "",
                       "enum": [
                         "read",
@@ -88672,15 +90703,6 @@
                         },
                         {
                           "type": "string",
-                          "name": "team_discussions",
-                          "description": "",
-                          "enum": [
-                            "read",
-                            "write"
-                          ]
-                        },
-                        {
-                          "type": "string",
                           "name": "vulnerability_alerts",
                           "description": "",
                           "enum": [
@@ -89379,6 +91401,12 @@
                   "type": "boolean",
                   "name": "has_discussions",
                   "description": "<p>Whether the repository has discussions enabled.</p>"
+                },
+                {
+                  "type": "boolean",
+                  "name": "has_pull_requests",
+                  "description": "<p>Whether pull requests are enabled.</p>",
+                  "default": true
                 },
                 {
                   "type": "boolean",
@@ -90894,15 +92922,6 @@
                     {
                       "type": "string",
                       "name": "statuses",
-                      "description": "",
-                      "enum": [
-                        "read",
-                        "write"
-                      ]
-                    },
-                    {
-                      "type": "string",
-                      "name": "team_discussions",
                       "description": "",
                       "enum": [
                         "read",
@@ -92443,15 +94462,6 @@
                     },
                     {
                       "type": "string",
-                      "name": "team_discussions",
-                      "description": "",
-                      "enum": [
-                        "read",
-                        "write"
-                      ]
-                    },
-                    {
-                      "type": "string",
                       "name": "vulnerability_alerts",
                       "description": "",
                       "enum": [
@@ -93930,15 +95940,6 @@
                     {
                       "type": "string",
                       "name": "statuses",
-                      "description": "",
-                      "enum": [
-                        "read",
-                        "write"
-                      ]
-                    },
-                    {
-                      "type": "string",
-                      "name": "team_discussions",
                       "description": "",
                       "enum": [
                         "read",
@@ -95473,15 +97474,6 @@
                         },
                         {
                           "type": "string",
-                          "name": "team_discussions",
-                          "description": "",
-                          "enum": [
-                            "read",
-                            "write"
-                          ]
-                        },
-                        {
-                          "type": "string",
                           "name": "vulnerability_alerts",
                           "description": "",
                           "enum": [
@@ -96222,6 +98214,12 @@
                   "description": "<p>Whether discussions are enabled.</p>",
                   "isRequired": true,
                   "default": false
+                },
+                {
+                  "type": "boolean",
+                  "name": "has_pull_requests",
+                  "description": "<p>Whether pull requests are enabled.</p>",
+                  "default": true
                 },
                 {
                   "type": "string or null",
@@ -97701,15 +99699,6 @@
                     {
                       "type": "string",
                       "name": "statuses",
-                      "description": "",
-                      "enum": [
-                        "read",
-                        "write"
-                      ]
-                    },
-                    {
-                      "type": "string",
-                      "name": "team_discussions",
                       "description": "",
                       "enum": [
                         "read",
@@ -99245,15 +101234,6 @@
                     {
                       "type": "string",
                       "name": "statuses",
-                      "description": "",
-                      "enum": [
-                        "read",
-                        "write"
-                      ]
-                    },
-                    {
-                      "type": "string",
-                      "name": "team_discussions",
                       "description": "",
                       "enum": [
                         "read",
@@ -100988,15 +102968,6 @@
                     },
                     {
                       "type": "string",
-                      "name": "team_discussions",
-                      "description": "",
-                      "enum": [
-                        "read",
-                        "write"
-                      ]
-                    },
-                    {
-                      "type": "string",
                       "name": "vulnerability_alerts",
                       "description": "",
                       "enum": [
@@ -102525,15 +104496,6 @@
                     {
                       "type": "string",
                       "name": "statuses",
-                      "description": "",
-                      "enum": [
-                        "read",
-                        "write"
-                      ]
-                    },
-                    {
-                      "type": "string",
-                      "name": "team_discussions",
                       "description": "",
                       "enum": [
                         "read",
@@ -104085,15 +106047,6 @@
                     },
                     {
                       "type": "string",
-                      "name": "team_discussions",
-                      "description": "",
-                      "enum": [
-                        "read",
-                        "write"
-                      ]
-                    },
-                    {
-                      "type": "string",
                       "name": "vulnerability_alerts",
                       "description": "",
                       "enum": [
@@ -105618,15 +107571,6 @@
                     {
                       "type": "string",
                       "name": "statuses",
-                      "description": "",
-                      "enum": [
-                        "read",
-                        "write"
-                      ]
-                    },
-                    {
-                      "type": "string",
-                      "name": "team_discussions",
                       "description": "",
                       "enum": [
                         "read",
@@ -107162,15 +109106,6 @@
                     {
                       "type": "string",
                       "name": "statuses",
-                      "description": "",
-                      "enum": [
-                        "read",
-                        "write"
-                      ]
-                    },
-                    {
-                      "type": "string",
-                      "name": "team_discussions",
                       "description": "",
                       "enum": [
                         "read",
@@ -115041,7 +116976,7 @@
   "package": {
     "published": {
       "descriptionHtml": "<p>A package was published to a registry.</p>",
-      "summaryHtml": "<p>This event occurs when there is activity relating to GitHub Packages. For more information, see \"<a href=\"https://docs.github.com/packages/learn-github-packages/introduction-to-github-packages\">Introduction to GitHub Packages</a>.\" For information about the APIs to manage GitHub Packages, see <a href=\"https://docs.github.com/graphql/reference/objects#package\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/rest/packages\">Packages</a>\" in the REST API documentation.</p>\n<p>To install this event on a GitHub App, the app must have at least read-level access for the \"Packages\" repository permission.</p>",
+      "summaryHtml": "<p>This event occurs when there is activity relating to GitHub Packages. For more information, see \"<a href=\"https://docs.github.com/packages/learn-github-packages/introduction-to-github-packages\">Introduction to GitHub Packages</a>.\" For information about the APIs to manage GitHub Packages, see <a href=\"https://docs.github.com/graphql/reference/objects#package\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/rest/packages\">Packages</a>\" in the REST API documentation.</p>",
       "bodyParameters": [
         {
           "type": "string",
@@ -116149,15 +118084,14 @@
       ],
       "availability": [
         "repository",
-        "organization",
-        "app"
+        "organization"
       ],
       "action": "published",
       "category": "package"
     },
     "updated": {
       "descriptionHtml": "<p>A previously published package was updated.</p>",
-      "summaryHtml": "<p>This event occurs when there is activity relating to GitHub Packages. For more information, see \"<a href=\"https://docs.github.com/packages/learn-github-packages/introduction-to-github-packages\">Introduction to GitHub Packages</a>.\" For information about the APIs to manage GitHub Packages, see <a href=\"https://docs.github.com/graphql/reference/objects#package\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/rest/packages\">Packages</a>\" in the REST API documentation.</p>\n<p>To install this event on a GitHub App, the app must have at least read-level access for the \"Packages\" repository permission.</p>",
+      "summaryHtml": "<p>This event occurs when there is activity relating to GitHub Packages. For more information, see \"<a href=\"https://docs.github.com/packages/learn-github-packages/introduction-to-github-packages\">Introduction to GitHub Packages</a>.\" For information about the APIs to manage GitHub Packages, see <a href=\"https://docs.github.com/graphql/reference/objects#package\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/rest/packages\">Packages</a>\" in the REST API documentation.</p>",
       "bodyParameters": [
         {
           "type": "string",
@@ -117025,8 +118959,7 @@
       ],
       "availability": [
         "repository",
-        "organization",
-        "app"
+        "organization"
       ],
       "action": "updated",
       "category": "package"
@@ -129629,6 +131562,12 @@
                       "default": false
                     },
                     {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
                       "type": "string or null",
                       "name": "homepage",
                       "description": "",
@@ -130619,6 +132558,12 @@
                       "description": "<p>Whether discussions are enabled.</p>",
                       "isRequired": true,
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "string or null",
@@ -132867,6 +134812,12 @@
                     },
                     {
                       "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
+                      "type": "boolean",
                       "name": "has_pages",
                       "description": "",
                       "isRequired": true
@@ -133876,6 +135827,12 @@
                       "description": "<p>Whether discussions are enabled.</p>",
                       "isRequired": true,
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "string or null",
@@ -136149,6 +138106,12 @@
                       "default": false
                     },
                     {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
                       "type": "string or null",
                       "name": "homepage",
                       "description": "",
@@ -137139,6 +139102,12 @@
                       "description": "<p>Whether discussions are enabled.</p>",
                       "isRequired": true,
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "string or null",
@@ -140417,6 +142386,12 @@
                     },
                     {
                       "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
+                      "type": "boolean",
                       "name": "archived",
                       "description": "<p>Whether the repository is archived.</p>",
                       "isRequired": true,
@@ -141381,6 +143356,12 @@
                       "name": "has_discussions",
                       "description": "<p>Whether discussions are enabled.</p>",
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "boolean",
@@ -144072,6 +146053,12 @@
                     },
                     {
                       "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
+                      "type": "boolean",
                       "name": "archived",
                       "description": "<p>Whether the repository is archived.</p>",
                       "isRequired": true,
@@ -145036,6 +147023,12 @@
                       "name": "has_discussions",
                       "description": "<p>Whether discussions are enabled.</p>",
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "boolean",
@@ -146955,6 +148948,12 @@
                       "default": false
                     },
                     {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
                       "type": "string or null",
                       "name": "homepage",
                       "description": "",
@@ -147945,6 +149944,12 @@
                       "description": "<p>Whether discussions are enabled.</p>",
                       "isRequired": true,
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "string or null",
@@ -150212,6 +152217,12 @@
                       "default": false
                     },
                     {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
                       "type": "string or null",
                       "name": "homepage",
                       "description": "",
@@ -151202,6 +153213,12 @@
                       "description": "<p>Whether discussions are enabled.</p>",
                       "isRequired": true,
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "string or null",
@@ -154565,6 +156582,12 @@
                     },
                     {
                       "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
+                      "type": "boolean",
                       "name": "archived",
                       "description": "<p>Whether the repository is archived.</p>",
                       "isRequired": true,
@@ -155529,6 +157552,12 @@
                       "name": "has_discussions",
                       "description": "<p>Whether discussions are enabled.</p>",
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "boolean",
@@ -157214,6 +159243,12 @@
                       "default": false
                     },
                     {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
                       "type": "string or null",
                       "name": "homepage",
                       "description": "",
@@ -158204,6 +160239,12 @@
                       "description": "<p>Whether discussions are enabled.</p>",
                       "isRequired": true,
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "string or null",
@@ -160522,6 +162563,12 @@
                       "default": false
                     },
                     {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
                       "type": "string or null",
                       "name": "homepage",
                       "description": "",
@@ -161512,6 +163559,12 @@
                       "description": "<p>Whether discussions are enabled.</p>",
                       "isRequired": true,
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "string or null",
@@ -163780,6 +165833,12 @@
                       "default": false
                     },
                     {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
                       "type": "string or null",
                       "name": "homepage",
                       "description": "",
@@ -164770,6 +166829,12 @@
                       "description": "<p>Whether discussions are enabled.</p>",
                       "isRequired": true,
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "string or null",
@@ -167270,6 +169335,12 @@
                       "default": false
                     },
                     {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
                       "type": "string or null",
                       "name": "homepage",
                       "description": "",
@@ -168260,6 +170331,12 @@
                       "description": "<p>Whether discussions are enabled.</p>",
                       "isRequired": true,
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "string or null",
@@ -171532,6 +173609,12 @@
                     },
                     {
                       "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
+                      "type": "boolean",
                       "name": "archived",
                       "description": "<p>Whether the repository is archived.</p>",
                       "isRequired": true,
@@ -172496,6 +174579,12 @@
                       "name": "has_discussions",
                       "description": "<p>Whether discussions are enabled.</p>",
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "boolean",
@@ -175187,6 +177276,12 @@
                     },
                     {
                       "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
+                      "type": "boolean",
                       "name": "archived",
                       "description": "<p>Whether the repository is archived.</p>",
                       "isRequired": true,
@@ -176151,6 +178246,12 @@
                       "name": "has_discussions",
                       "description": "<p>Whether discussions are enabled.</p>",
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "boolean",
@@ -178842,6 +180943,12 @@
                     },
                     {
                       "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
+                      "type": "boolean",
                       "name": "archived",
                       "description": "<p>Whether the repository is archived.</p>",
                       "isRequired": true,
@@ -179806,6 +181913,12 @@
                       "name": "has_discussions",
                       "description": "<p>Whether discussions are enabled.</p>",
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "boolean",
@@ -181492,6 +183605,12 @@
                       "default": false
                     },
                     {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
                       "type": "string or null",
                       "name": "homepage",
                       "description": "",
@@ -182482,6 +184601,12 @@
                       "description": "<p>Whether discussions are enabled.</p>",
                       "isRequired": true,
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "string or null",
@@ -185046,6 +187171,12 @@
                       "default": false
                     },
                     {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
                       "type": "string or null",
                       "name": "homepage",
                       "description": "",
@@ -186036,6 +188167,12 @@
                       "description": "<p>Whether discussions are enabled.</p>",
                       "isRequired": true,
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "string or null",
@@ -188599,6 +190736,12 @@
                       "default": false
                     },
                     {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
                       "type": "string or null",
                       "name": "homepage",
                       "description": "",
@@ -189589,6 +191732,12 @@
                       "description": "<p>Whether discussions are enabled.</p>",
                       "isRequired": true,
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "string or null",
@@ -191983,6 +194132,12 @@
                       "default": false
                     },
                     {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
                       "type": "string or null",
                       "name": "homepage",
                       "description": "",
@@ -192973,6 +195128,12 @@
                       "description": "<p>Whether discussions are enabled.</p>",
                       "isRequired": true,
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "string or null",
@@ -195291,6 +197452,12 @@
                       "default": false
                     },
                     {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
                       "type": "string or null",
                       "name": "homepage",
                       "description": "",
@@ -196281,6 +198448,12 @@
                       "description": "<p>Whether discussions are enabled.</p>",
                       "isRequired": true,
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "string or null",
@@ -198548,6 +200721,12 @@
                       "default": false
                     },
                     {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
                       "type": "string or null",
                       "name": "homepage",
                       "description": "",
@@ -199538,6 +201717,12 @@
                       "description": "<p>Whether discussions are enabled.</p>",
                       "isRequired": true,
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "string or null",
@@ -201801,6 +203986,12 @@
                       "default": false
                     },
                     {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
                       "type": "string or null",
                       "name": "homepage",
                       "description": "",
@@ -202769,6 +204960,12 @@
                       "name": "has_discussions",
                       "description": "<p>Whether discussions are enabled.</p>",
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "string or null",
@@ -204877,6 +207074,12 @@
                       "default": false
                     },
                     {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
                       "type": "string or null",
                       "name": "homepage",
                       "description": "",
@@ -205846,6 +208049,12 @@
                       "description": "<p>Whether discussions are enabled.</p>",
                       "isRequired": true,
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "string or null",
@@ -207975,6 +210184,12 @@
                       "default": false
                     },
                     {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
                       "type": "string or null",
                       "name": "homepage",
                       "description": "",
@@ -208944,6 +211159,12 @@
                       "description": "<p>Whether discussions are enabled.</p>",
                       "isRequired": true,
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "string or null",
@@ -211048,6 +213269,12 @@
                       "default": false
                     },
                     {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
                       "type": "string or null",
                       "name": "homepage",
                       "description": "",
@@ -212018,6 +214245,12 @@
                       "description": "<p>Whether discussions are enabled.</p>",
                       "isRequired": true,
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "string or null",
@@ -217585,6 +219818,12 @@
                       "default": false
                     },
                     {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
                       "type": "string or null",
                       "name": "homepage",
                       "description": "",
@@ -218555,6 +220794,12 @@
                       "description": "<p>Whether discussions are enabled.</p>",
                       "isRequired": true,
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "string or null",
@@ -220897,6 +223142,12 @@
                       "default": false
                     },
                     {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
                       "type": "string or null",
                       "name": "homepage",
                       "description": "",
@@ -221823,6 +224074,12 @@
                       "description": "<p>Whether discussions are enabled.</p>",
                       "isRequired": true,
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "string or null",
@@ -224317,6 +226574,12 @@
                       "default": false
                     },
                     {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
                       "type": "string or null",
                       "name": "homepage",
                       "description": "",
@@ -225243,6 +227506,12 @@
                       "description": "<p>Whether discussions are enabled.</p>",
                       "isRequired": true,
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "string or null",
@@ -237132,7 +239401,7 @@
                 {
                   "type": "integer or null",
                   "name": "actor_id",
-                  "description": "<p>The ID of the actor that can bypass a ruleset. Required for <code>Integration</code>, <code>RepositoryRole</code>, and <code>Team</code> actor types. If <code>actor_type</code> is <code>OrganizationAdmin</code>, this should be <code>1</code>. If <code>actor_type</code> is <code>DeployKey</code>, this should be null. <code>OrganizationAdmin</code> is not applicable for personal repositories.</p>"
+                  "description": "<p>The ID of the actor that can bypass a ruleset. Required for <code>Integration</code>, <code>RepositoryRole</code>, and <code>Team</code> actor types. If <code>actor_type</code> is <code>OrganizationAdmin</code>, <code>actor_id</code> is ignored. If <code>actor_type</code> is <code>DeployKey</code>, this should be null. <code>OrganizationAdmin</code> is not applicable for personal repositories.</p>"
                 },
                 {
                   "type": "string",
@@ -237604,7 +239873,7 @@
                         {
                           "type": "string",
                           "name": "name",
-                          "description": "<p>How this rule will appear to users.</p>"
+                          "description": "<p>How this rule appears when configuring it.</p>"
                         },
                         {
                           "type": "boolean",
@@ -237655,7 +239924,7 @@
                         {
                           "type": "string",
                           "name": "name",
-                          "description": "<p>How this rule will appear to users.</p>"
+                          "description": "<p>How this rule appears when configuring it.</p>"
                         },
                         {
                           "type": "boolean",
@@ -237706,7 +239975,7 @@
                         {
                           "type": "string",
                           "name": "name",
-                          "description": "<p>How this rule will appear to users.</p>"
+                          "description": "<p>How this rule appears when configuring it.</p>"
                         },
                         {
                           "type": "boolean",
@@ -237757,7 +240026,7 @@
                         {
                           "type": "string",
                           "name": "name",
-                          "description": "<p>How this rule will appear to users.</p>"
+                          "description": "<p>How this rule appears when configuring it.</p>"
                         },
                         {
                           "type": "boolean",
@@ -237808,7 +240077,7 @@
                         {
                           "type": "string",
                           "name": "name",
-                          "description": "<p>How this rule will appear to users.</p>"
+                          "description": "<p>How this rule appears when configuring it.</p>"
                         },
                         {
                           "type": "boolean",
@@ -238246,7 +240515,7 @@
                 {
                   "type": "integer or null",
                   "name": "actor_id",
-                  "description": "<p>The ID of the actor that can bypass a ruleset. Required for <code>Integration</code>, <code>RepositoryRole</code>, and <code>Team</code> actor types. If <code>actor_type</code> is <code>OrganizationAdmin</code>, this should be <code>1</code>. If <code>actor_type</code> is <code>DeployKey</code>, this should be null. <code>OrganizationAdmin</code> is not applicable for personal repositories.</p>"
+                  "description": "<p>The ID of the actor that can bypass a ruleset. Required for <code>Integration</code>, <code>RepositoryRole</code>, and <code>Team</code> actor types. If <code>actor_type</code> is <code>OrganizationAdmin</code>, <code>actor_id</code> is ignored. If <code>actor_type</code> is <code>DeployKey</code>, this should be null. <code>OrganizationAdmin</code> is not applicable for personal repositories.</p>"
                 },
                 {
                   "type": "string",
@@ -238718,7 +240987,7 @@
                         {
                           "type": "string",
                           "name": "name",
-                          "description": "<p>How this rule will appear to users.</p>"
+                          "description": "<p>How this rule appears when configuring it.</p>"
                         },
                         {
                           "type": "boolean",
@@ -238769,7 +241038,7 @@
                         {
                           "type": "string",
                           "name": "name",
-                          "description": "<p>How this rule will appear to users.</p>"
+                          "description": "<p>How this rule appears when configuring it.</p>"
                         },
                         {
                           "type": "boolean",
@@ -238820,7 +241089,7 @@
                         {
                           "type": "string",
                           "name": "name",
-                          "description": "<p>How this rule will appear to users.</p>"
+                          "description": "<p>How this rule appears when configuring it.</p>"
                         },
                         {
                           "type": "boolean",
@@ -238871,7 +241140,7 @@
                         {
                           "type": "string",
                           "name": "name",
-                          "description": "<p>How this rule will appear to users.</p>"
+                          "description": "<p>How this rule appears when configuring it.</p>"
                         },
                         {
                           "type": "boolean",
@@ -238922,7 +241191,7 @@
                         {
                           "type": "string",
                           "name": "name",
-                          "description": "<p>How this rule will appear to users.</p>"
+                          "description": "<p>How this rule appears when configuring it.</p>"
                         },
                         {
                           "type": "boolean",
@@ -239360,7 +241629,7 @@
                 {
                   "type": "integer or null",
                   "name": "actor_id",
-                  "description": "<p>The ID of the actor that can bypass a ruleset. Required for <code>Integration</code>, <code>RepositoryRole</code>, and <code>Team</code> actor types. If <code>actor_type</code> is <code>OrganizationAdmin</code>, this should be <code>1</code>. If <code>actor_type</code> is <code>DeployKey</code>, this should be null. <code>OrganizationAdmin</code> is not applicable for personal repositories.</p>"
+                  "description": "<p>The ID of the actor that can bypass a ruleset. Required for <code>Integration</code>, <code>RepositoryRole</code>, and <code>Team</code> actor types. If <code>actor_type</code> is <code>OrganizationAdmin</code>, <code>actor_id</code> is ignored. If <code>actor_type</code> is <code>DeployKey</code>, this should be null. <code>OrganizationAdmin</code> is not applicable for personal repositories.</p>"
                 },
                 {
                   "type": "string",
@@ -239832,7 +242101,7 @@
                         {
                           "type": "string",
                           "name": "name",
-                          "description": "<p>How this rule will appear to users.</p>"
+                          "description": "<p>How this rule appears when configuring it.</p>"
                         },
                         {
                           "type": "boolean",
@@ -239883,7 +242152,7 @@
                         {
                           "type": "string",
                           "name": "name",
-                          "description": "<p>How this rule will appear to users.</p>"
+                          "description": "<p>How this rule appears when configuring it.</p>"
                         },
                         {
                           "type": "boolean",
@@ -239934,7 +242203,7 @@
                         {
                           "type": "string",
                           "name": "name",
-                          "description": "<p>How this rule will appear to users.</p>"
+                          "description": "<p>How this rule appears when configuring it.</p>"
                         },
                         {
                           "type": "boolean",
@@ -239985,7 +242254,7 @@
                         {
                           "type": "string",
                           "name": "name",
-                          "description": "<p>How this rule will appear to users.</p>"
+                          "description": "<p>How this rule appears when configuring it.</p>"
                         },
                         {
                           "type": "boolean",
@@ -240036,7 +242305,7 @@
                         {
                           "type": "string",
                           "name": "name",
-                          "description": "<p>How this rule will appear to users.</p>"
+                          "description": "<p>How this rule appears when configuring it.</p>"
                         },
                         {
                           "type": "boolean",
@@ -240917,7 +243186,7 @@
                             {
                               "type": "string",
                               "name": "name",
-                              "description": "<p>How this rule will appear to users.</p>"
+                              "description": "<p>How this rule appears when configuring it.</p>"
                             },
                             {
                               "type": "boolean",
@@ -240968,7 +243237,7 @@
                             {
                               "type": "string",
                               "name": "name",
-                              "description": "<p>How this rule will appear to users.</p>"
+                              "description": "<p>How this rule appears when configuring it.</p>"
                             },
                             {
                               "type": "boolean",
@@ -241019,7 +243288,7 @@
                             {
                               "type": "string",
                               "name": "name",
-                              "description": "<p>How this rule will appear to users.</p>"
+                              "description": "<p>How this rule appears when configuring it.</p>"
                             },
                             {
                               "type": "boolean",
@@ -241070,7 +243339,7 @@
                             {
                               "type": "string",
                               "name": "name",
-                              "description": "<p>How this rule will appear to users.</p>"
+                              "description": "<p>How this rule appears when configuring it.</p>"
                             },
                             {
                               "type": "boolean",
@@ -241121,7 +243390,7 @@
                             {
                               "type": "string",
                               "name": "name",
-                              "description": "<p>How this rule will appear to users.</p>"
+                              "description": "<p>How this rule appears when configuring it.</p>"
                             },
                             {
                               "type": "boolean",
@@ -241814,7 +244083,7 @@
                             {
                               "type": "string",
                               "name": "name",
-                              "description": "<p>How this rule will appear to users.</p>"
+                              "description": "<p>How this rule appears when configuring it.</p>"
                             },
                             {
                               "type": "boolean",
@@ -241865,7 +244134,7 @@
                             {
                               "type": "string",
                               "name": "name",
-                              "description": "<p>How this rule will appear to users.</p>"
+                              "description": "<p>How this rule appears when configuring it.</p>"
                             },
                             {
                               "type": "boolean",
@@ -241916,7 +244185,7 @@
                             {
                               "type": "string",
                               "name": "name",
-                              "description": "<p>How this rule will appear to users.</p>"
+                              "description": "<p>How this rule appears when configuring it.</p>"
                             },
                             {
                               "type": "boolean",
@@ -241967,7 +244236,7 @@
                             {
                               "type": "string",
                               "name": "name",
-                              "description": "<p>How this rule will appear to users.</p>"
+                              "description": "<p>How this rule appears when configuring it.</p>"
                             },
                             {
                               "type": "boolean",
@@ -242018,7 +244287,7 @@
                             {
                               "type": "string",
                               "name": "name",
-                              "description": "<p>How this rule will appear to users.</p>"
+                              "description": "<p>How this rule appears when configuring it.</p>"
                             },
                             {
                               "type": "boolean",
@@ -242716,7 +244985,7 @@
                                 {
                                   "type": "string",
                                   "name": "name",
-                                  "description": "<p>How this rule will appear to users.</p>"
+                                  "description": "<p>How this rule appears when configuring it.</p>"
                                 },
                                 {
                                   "type": "boolean",
@@ -242767,7 +245036,7 @@
                                 {
                                   "type": "string",
                                   "name": "name",
-                                  "description": "<p>How this rule will appear to users.</p>"
+                                  "description": "<p>How this rule appears when configuring it.</p>"
                                 },
                                 {
                                   "type": "boolean",
@@ -242818,7 +245087,7 @@
                                 {
                                   "type": "string",
                                   "name": "name",
-                                  "description": "<p>How this rule will appear to users.</p>"
+                                  "description": "<p>How this rule appears when configuring it.</p>"
                                 },
                                 {
                                   "type": "boolean",
@@ -242869,7 +245138,7 @@
                                 {
                                   "type": "string",
                                   "name": "name",
-                                  "description": "<p>How this rule will appear to users.</p>"
+                                  "description": "<p>How this rule appears when configuring it.</p>"
                                 },
                                 {
                                   "type": "boolean",
@@ -242920,7 +245189,7 @@
                                 {
                                   "type": "string",
                                   "name": "name",
-                                  "description": "<p>How this rule will appear to users.</p>"
+                                  "description": "<p>How this rule appears when configuring it.</p>"
                                 },
                                 {
                                   "type": "boolean",
@@ -243521,6 +245790,7 @@
               "description": "",
               "isRequired": true,
               "enum": [
+                "auto_dismissed",
                 "open"
               ]
             }
@@ -244098,6 +246368,7 @@
               "description": "",
               "isRequired": true,
               "enum": [
+                "auto_dismissed",
                 "open"
               ]
             }
@@ -251850,6 +254121,22 @@
                           ]
                         }
                       ]
+                    },
+                    {
+                      "type": "object",
+                      "name": "secret_scanning_delegated_alert_dismissal",
+                      "description": "",
+                      "childParamsGroups": [
+                        {
+                          "type": "string",
+                          "name": "status",
+                          "description": "",
+                          "enum": [
+                            "enabled",
+                            "disabled"
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -257525,6 +259812,12 @@
                 },
                 {
                   "type": "boolean",
+                  "name": "has_pull_requests",
+                  "description": "<p>Whether pull requests are enabled.</p>",
+                  "default": true
+                },
+                {
+                  "type": "boolean",
                   "name": "archived",
                   "description": "<p>Whether the repository is archived.</p>",
                   "isRequired": true,
@@ -258540,6 +260833,12 @@
               "name": "has_discussions",
               "description": "<p>Whether discussions are enabled.</p>",
               "default": false
+            },
+            {
+              "type": "boolean",
+              "name": "has_pull_requests",
+              "description": "<p>Whether pull requests are enabled.</p>",
+              "default": true
             },
             {
               "type": "boolean",
@@ -260381,6 +262680,12 @@
                   "name": "has_discussions",
                   "description": "<p>Whether discussions are enabled.</p>",
                   "default": false
+                },
+                {
+                  "type": "boolean",
+                  "name": "has_pull_requests",
+                  "description": "<p>Whether pull requests are enabled.</p>",
+                  "default": true
                 },
                 {
                   "type": "boolean",
@@ -262489,6 +264794,12 @@
                 },
                 {
                   "type": "boolean",
+                  "name": "has_pull_requests",
+                  "description": "<p>Whether pull requests are enabled.</p>",
+                  "default": true
+                },
+                {
+                  "type": "boolean",
                   "name": "archived",
                   "description": "<p>Whether the repository is archived.</p>",
                   "isRequired": true,
@@ -263504,6 +265815,12 @@
               "name": "has_discussions",
               "description": "<p>Whether discussions are enabled.</p>",
               "default": false
+            },
+            {
+              "type": "boolean",
+              "name": "has_pull_requests",
+              "description": "<p>Whether pull requests are enabled.</p>",
+              "default": true
             },
             {
               "type": "boolean",
@@ -265345,6 +267662,12 @@
                   "name": "has_discussions",
                   "description": "<p>Whether discussions are enabled.</p>",
                   "default": false
+                },
+                {
+                  "type": "boolean",
+                  "name": "has_pull_requests",
+                  "description": "<p>Whether pull requests are enabled.</p>",
+                  "default": true
                 },
                 {
                   "type": "boolean",
@@ -267453,6 +269776,12 @@
                 },
                 {
                   "type": "boolean",
+                  "name": "has_pull_requests",
+                  "description": "<p>Whether pull requests are enabled.</p>",
+                  "default": true
+                },
+                {
+                  "type": "boolean",
                   "name": "archived",
                   "description": "<p>Whether the repository is archived.</p>",
                   "isRequired": true,
@@ -268468,6 +270797,12 @@
               "name": "has_discussions",
               "description": "<p>Whether discussions are enabled.</p>",
               "default": false
+            },
+            {
+              "type": "boolean",
+              "name": "has_pull_requests",
+              "description": "<p>Whether pull requests are enabled.</p>",
+              "default": true
             },
             {
               "type": "boolean",
@@ -270309,6 +272644,12 @@
                   "name": "has_discussions",
                   "description": "<p>Whether discussions are enabled.</p>",
                   "default": false
+                },
+                {
+                  "type": "boolean",
+                  "name": "has_pull_requests",
+                  "description": "<p>Whether pull requests are enabled.</p>",
+                  "default": true
                 },
                 {
                   "type": "boolean",
@@ -272417,6 +274758,12 @@
                 },
                 {
                   "type": "boolean",
+                  "name": "has_pull_requests",
+                  "description": "<p>Whether pull requests are enabled.</p>",
+                  "default": true
+                },
+                {
+                  "type": "boolean",
                   "name": "archived",
                   "description": "<p>Whether the repository is archived.</p>",
                   "isRequired": true,
@@ -273432,6 +275779,12 @@
               "name": "has_discussions",
               "description": "<p>Whether discussions are enabled.</p>",
               "default": false
+            },
+            {
+              "type": "boolean",
+              "name": "has_pull_requests",
+              "description": "<p>Whether pull requests are enabled.</p>",
+              "default": true
             },
             {
               "type": "boolean",
@@ -275273,6 +277626,12 @@
                   "name": "has_discussions",
                   "description": "<p>Whether discussions are enabled.</p>",
                   "default": false
+                },
+                {
+                  "type": "boolean",
+                  "name": "has_pull_requests",
+                  "description": "<p>Whether pull requests are enabled.</p>",
+                  "default": true
                 },
                 {
                   "type": "boolean",

@@ -24,6 +24,7 @@ export type ExtendedRequest = Request & {
   context?: Context
   language?: string
   userLanguage?: string
+  userVersion?: string
   FailBot?: Failbot
 }
 
@@ -327,6 +328,7 @@ export type SecretScanningData = {
   isPrivateWithGhas: boolean
   hasPushProtection: boolean
   hasValidityCheck: boolean | string
+  hasExtendedMetadata: boolean
   ismultipart?: boolean
   base64Supported: boolean
   isduplicate: boolean
@@ -411,6 +413,7 @@ export type TitlesTree = {
   hidden?: boolean
   sidebarLink?: SidebarLink
   layout?: string
+  crossProductChild?: boolean
 }
 
 export type Tree = {
@@ -418,6 +421,7 @@ export type Tree = {
   children: string[] | undefined
   href: string
   childPages: Tree[]
+  crossProductChild?: boolean
 }
 export type VersionedTree = {
   [version: string]: Tree
@@ -431,6 +435,7 @@ export type UnversionedTree = {
   page: Page
   children: string[]
   childPages: UnversionedTree[]
+  crossProductChild?: boolean
 }
 
 export type UnversionLanguageTree = {

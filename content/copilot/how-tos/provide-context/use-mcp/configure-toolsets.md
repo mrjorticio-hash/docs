@@ -10,6 +10,8 @@ topics:
 redirect_from:
   - /copilot/how-tos/context/use-mcp/configure-toolsets
 contentType: how-tos
+category:
+  - Configure Copilot
 ---
 
 The {% data variables.product.github %} MCP server includes default toolsets (`repos`, `issues`, and `pull_requests`) that are enabled automatically. You can customize toolset configuration by:
@@ -43,4 +45,3 @@ For detailed setup instructions, see [Local {% data variables.product.github %} 
 
 * [AUTOTITLE](/copilot/how-tos/provide-context/use-mcp/set-up-the-github-mcp-server)
 * [AUTOTITLE](/copilot/how-tos/provide-context/use-mcp/use-the-github-mcp-server)
-* [AUTOTITLE](/copilot/how-tos/provide-context/use-mcp/configure-toolsets)

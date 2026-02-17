@@ -4507,6 +4507,11 @@
                     },
                     {
                       "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": ""
+                    },
+                    {
+                      "type": "boolean",
                       "name": "archived",
                       "description": ""
                     },
@@ -4649,7 +4654,7 @@
                           "description": ""
                         },
                         {
-                          "type": "string",
+                          "type": "string or null",
                           "name": "url",
                           "description": ""
                         },
@@ -6506,6 +6511,11 @@
                     },
                     {
                       "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": ""
+                    },
+                    {
+                      "type": "boolean",
                       "name": "archived",
                       "description": ""
                     },
@@ -6648,7 +6658,7 @@
                           "description": ""
                         },
                         {
-                          "type": "string",
+                          "type": "string or null",
                           "name": "url",
                           "description": ""
                         },
@@ -8506,6 +8516,11 @@
                     },
                     {
                       "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": ""
+                    },
+                    {
+                      "type": "boolean",
                       "name": "archived",
                       "description": ""
                     },
@@ -8648,7 +8663,7 @@
                           "description": ""
                         },
                         {
-                          "type": "string",
+                          "type": "string or null",
                           "name": "url",
                           "description": ""
                         },
@@ -10518,6 +10533,11 @@
                     },
                     {
                       "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": ""
+                    },
+                    {
+                      "type": "boolean",
                       "name": "archived",
                       "description": ""
                     },
@@ -10660,7 +10680,7 @@
                           "description": ""
                         },
                         {
-                          "type": "string",
+                          "type": "string or null",
                           "name": "url",
                           "description": ""
                         },
@@ -11686,15 +11706,6 @@
                     },
                     {
                       "type": "string",
-                      "name": "team_discussions",
-                      "description": "",
-                      "enum": [
-                        "read",
-                        "write"
-                      ]
-                    },
-                    {
-                      "type": "string",
                       "name": "vulnerability_alerts",
                       "description": "",
                       "enum": [
@@ -12638,15 +12649,6 @@
                     },
                     {
                       "type": "string",
-                      "name": "team_discussions",
-                      "description": "",
-                      "enum": [
-                        "read",
-                        "write"
-                      ]
-                    },
-                    {
-                      "type": "string",
                       "name": "vulnerability_alerts",
                       "description": "",
                       "enum": [
@@ -13580,15 +13582,6 @@
                     {
                       "type": "string",
                       "name": "statuses",
-                      "description": "",
-                      "enum": [
-                        "read",
-                        "write"
-                      ]
-                    },
-                    {
-                      "type": "string",
-                      "name": "team_discussions",
                       "description": "",
                       "enum": [
                         "read",
@@ -23565,15 +23558,6 @@
                     },
                     {
                       "type": "string",
-                      "name": "team_discussions",
-                      "description": "",
-                      "enum": [
-                        "read",
-                        "write"
-                      ]
-                    },
-                    {
-                      "type": "string",
                       "name": "vulnerability_alerts",
                       "description": "",
                       "enum": [
@@ -27017,6 +27001,12 @@
                     },
                     {
                       "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
+                      "type": "boolean",
                       "name": "archived",
                       "description": "<p>Whether the repository is archived.</p>",
                       "isRequired": true,
@@ -27981,6 +27971,12 @@
                       "name": "has_discussions",
                       "description": "<p>Whether discussions are enabled.</p>",
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "boolean",
@@ -34599,15 +34595,6 @@
                     },
                     {
                       "type": "string",
-                      "name": "team_discussions",
-                      "description": "",
-                      "enum": [
-                        "read",
-                        "write"
-                      ]
-                    },
-                    {
-                      "type": "string",
                       "name": "vulnerability_alerts",
                       "description": "",
                       "enum": [
@@ -35335,15 +35322,6 @@
                     {
                       "type": "string",
                       "name": "statuses",
-                      "description": "",
-                      "enum": [
-                        "read",
-                        "write"
-                      ]
-                    },
-                    {
-                      "type": "string",
-                      "name": "team_discussions",
                       "description": "",
                       "enum": [
                         "read",
@@ -44907,6 +44885,12 @@
                   "name": "has_discussions",
                   "description": "<p>Whether discussions are enabled.</p>",
                   "default": false
+                },
+                {
+                  "type": "boolean",
+                  "name": "has_pull_requests",
+                  "description": "<p>Whether pull requests are enabled.</p>",
+                  "default": true
                 },
                 {
                   "type": "boolean",
@@ -57662,15 +57646,6 @@
                     },
                     {
                       "type": "string",
-                      "name": "team_discussions",
-                      "description": "",
-                      "enum": [
-                        "read",
-                        "write"
-                      ]
-                    },
-                    {
-                      "type": "string",
                       "name": "vulnerability_alerts",
                       "description": "",
                       "enum": [
@@ -60078,15 +60053,6 @@
                     },
                     {
                       "type": "string",
-                      "name": "team_discussions",
-                      "description": "",
-                      "enum": [
-                        "read",
-                        "write"
-                      ]
-                    },
-                    {
-                      "type": "string",
                       "name": "vulnerability_alerts",
                       "description": "",
                       "enum": [
@@ -61565,15 +61531,6 @@
                     {
                       "type": "string",
                       "name": "statuses",
-                      "description": "",
-                      "enum": [
-                        "read",
-                        "write"
-                      ]
-                    },
-                    {
-                      "type": "string",
-                      "name": "team_discussions",
                       "description": "",
                       "enum": [
                         "read",
@@ -63381,15 +63338,6 @@
                     },
                     {
                       "type": "string",
-                      "name": "team_discussions",
-                      "description": "",
-                      "enum": [
-                        "read",
-                        "write"
-                      ]
-                    },
-                    {
-                      "type": "string",
                       "name": "vulnerability_alerts",
                       "description": "",
                       "enum": [
@@ -64976,15 +64924,6 @@
                     },
                     {
                       "type": "string",
-                      "name": "team_discussions",
-                      "description": "",
-                      "enum": [
-                        "read",
-                        "write"
-                      ]
-                    },
-                    {
-                      "type": "string",
                       "name": "vulnerability_alerts",
                       "description": "",
                       "enum": [
@@ -66528,15 +66467,6 @@
                     },
                     {
                       "type": "string",
-                      "name": "team_discussions",
-                      "description": "",
-                      "enum": [
-                        "read",
-                        "write"
-                      ]
-                    },
-                    {
-                      "type": "string",
                       "name": "vulnerability_alerts",
                       "description": "",
                       "enum": [
@@ -68014,15 +67944,6 @@
                     {
                       "type": "string",
                       "name": "statuses",
-                      "description": "",
-                      "enum": [
-                        "read",
-                        "write"
-                      ]
-                    },
-                    {
-                      "type": "string",
-                      "name": "team_discussions",
                       "description": "",
                       "enum": [
                         "read",
@@ -69770,15 +69691,6 @@
                         },
                         {
                           "type": "string",
-                          "name": "team_discussions",
-                          "description": "",
-                          "enum": [
-                            "read",
-                            "write"
-                          ]
-                        },
-                        {
-                          "type": "string",
                           "name": "vulnerability_alerts",
                           "description": "",
                           "enum": [
@@ -70477,6 +70389,12 @@
                   "type": "boolean",
                   "name": "has_discussions",
                   "description": "<p>Whether the repository has discussions enabled.</p>"
+                },
+                {
+                  "type": "boolean",
+                  "name": "has_pull_requests",
+                  "description": "<p>Whether pull requests are enabled.</p>",
+                  "default": true
                 },
                 {
                   "type": "boolean",
@@ -71992,15 +71910,6 @@
                     {
                       "type": "string",
                       "name": "statuses",
-                      "description": "",
-                      "enum": [
-                        "read",
-                        "write"
-                      ]
-                    },
-                    {
-                      "type": "string",
-                      "name": "team_discussions",
                       "description": "",
                       "enum": [
                         "read",
@@ -73541,15 +73450,6 @@
                     },
                     {
                       "type": "string",
-                      "name": "team_discussions",
-                      "description": "",
-                      "enum": [
-                        "read",
-                        "write"
-                      ]
-                    },
-                    {
-                      "type": "string",
                       "name": "vulnerability_alerts",
                       "description": "",
                       "enum": [
@@ -75028,15 +74928,6 @@
                     {
                       "type": "string",
                       "name": "statuses",
-                      "description": "",
-                      "enum": [
-                        "read",
-                        "write"
-                      ]
-                    },
-                    {
-                      "type": "string",
-                      "name": "team_discussions",
                       "description": "",
                       "enum": [
                         "read",
@@ -76571,15 +76462,6 @@
                         },
                         {
                           "type": "string",
-                          "name": "team_discussions",
-                          "description": "",
-                          "enum": [
-                            "read",
-                            "write"
-                          ]
-                        },
-                        {
-                          "type": "string",
                           "name": "vulnerability_alerts",
                           "description": "",
                           "enum": [
@@ -77320,6 +77202,12 @@
                   "description": "<p>Whether discussions are enabled.</p>",
                   "isRequired": true,
                   "default": false
+                },
+                {
+                  "type": "boolean",
+                  "name": "has_pull_requests",
+                  "description": "<p>Whether pull requests are enabled.</p>",
+                  "default": true
                 },
                 {
                   "type": "string or null",
@@ -78799,15 +78687,6 @@
                     {
                       "type": "string",
                       "name": "statuses",
-                      "description": "",
-                      "enum": [
-                        "read",
-                        "write"
-                      ]
-                    },
-                    {
-                      "type": "string",
-                      "name": "team_discussions",
                       "description": "",
                       "enum": [
                         "read",
@@ -80477,15 +80356,6 @@
                     },
                     {
                       "type": "string",
-                      "name": "team_discussions",
-                      "description": "",
-                      "enum": [
-                        "read",
-                        "write"
-                      ]
-                    },
-                    {
-                      "type": "string",
                       "name": "vulnerability_alerts",
                       "description": "",
                       "enum": [
@@ -82014,15 +81884,6 @@
                     {
                       "type": "string",
                       "name": "statuses",
-                      "description": "",
-                      "enum": [
-                        "read",
-                        "write"
-                      ]
-                    },
-                    {
-                      "type": "string",
-                      "name": "team_discussions",
                       "description": "",
                       "enum": [
                         "read",
@@ -83574,15 +83435,6 @@
                     },
                     {
                       "type": "string",
-                      "name": "team_discussions",
-                      "description": "",
-                      "enum": [
-                        "read",
-                        "write"
-                      ]
-                    },
-                    {
-                      "type": "string",
                       "name": "vulnerability_alerts",
                       "description": "",
                       "enum": [
@@ -85107,15 +84959,6 @@
                     {
                       "type": "string",
                       "name": "statuses",
-                      "description": "",
-                      "enum": [
-                        "read",
-                        "write"
-                      ]
-                    },
-                    {
-                      "type": "string",
-                      "name": "team_discussions",
                       "description": "",
                       "enum": [
                         "read",
@@ -90465,7 +90308,7 @@
   "package": {
     "published": {
       "descriptionHtml": "<p>A package was published to a registry.</p>",
-      "summaryHtml": "<p>This event occurs when there is activity relating to GitHub Packages. For more information, see \"<a href=\"https://docs.github.com/enterprise-server@3.14/packages/learn-github-packages/introduction-to-github-packages\">Introduction to GitHub Packages</a>.\" For information about the APIs to manage GitHub Packages, see <a href=\"https://docs.github.com/enterprise-server@3.14/graphql/reference/objects#package\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/enterprise-server@3.14/rest/packages\">Packages</a>\" in the REST API documentation.</p>\n<p>To install this event on a GitHub App, the app must have at least read-level access for the \"Packages\" repository permission.</p>",
+      "summaryHtml": "<p>This event occurs when there is activity relating to GitHub Packages. For more information, see \"<a href=\"https://docs.github.com/enterprise-server@3.14/packages/learn-github-packages/introduction-to-github-packages\">Introduction to GitHub Packages</a>.\" For information about the APIs to manage GitHub Packages, see <a href=\"https://docs.github.com/enterprise-server@3.14/graphql/reference/objects#package\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/enterprise-server@3.14/rest/packages\">Packages</a>\" in the REST API documentation.</p>",
       "bodyParameters": [
         {
           "type": "string",
@@ -91573,15 +91416,14 @@
       ],
       "availability": [
         "repository",
-        "organization",
-        "app"
+        "organization"
       ],
       "action": "published",
       "category": "package"
     },
     "updated": {
       "descriptionHtml": "<p>A previously published package was updated.</p>",
-      "summaryHtml": "<p>This event occurs when there is activity relating to GitHub Packages. For more information, see \"<a href=\"https://docs.github.com/enterprise-server@3.14/packages/learn-github-packages/introduction-to-github-packages\">Introduction to GitHub Packages</a>.\" For information about the APIs to manage GitHub Packages, see <a href=\"https://docs.github.com/enterprise-server@3.14/graphql/reference/objects#package\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/enterprise-server@3.14/rest/packages\">Packages</a>\" in the REST API documentation.</p>\n<p>To install this event on a GitHub App, the app must have at least read-level access for the \"Packages\" repository permission.</p>",
+      "summaryHtml": "<p>This event occurs when there is activity relating to GitHub Packages. For more information, see \"<a href=\"https://docs.github.com/enterprise-server@3.14/packages/learn-github-packages/introduction-to-github-packages\">Introduction to GitHub Packages</a>.\" For information about the APIs to manage GitHub Packages, see <a href=\"https://docs.github.com/enterprise-server@3.14/graphql/reference/objects#package\">the GraphQL API documentation</a> or \"<a href=\"https://docs.github.com/enterprise-server@3.14/rest/packages\">Packages</a>\" in the REST API documentation.</p>",
       "bodyParameters": [
         {
           "type": "string",
@@ -92449,8 +92291,7 @@
       ],
       "availability": [
         "repository",
-        "organization",
-        "app"
+        "organization"
       ],
       "action": "updated",
       "category": "package"
@@ -104221,6 +104062,12 @@
                       "default": false
                     },
                     {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
                       "type": "string or null",
                       "name": "homepage",
                       "description": "",
@@ -105211,6 +105058,12 @@
                       "description": "<p>Whether discussions are enabled.</p>",
                       "isRequired": true,
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "string or null",
@@ -107459,6 +107312,12 @@
                     },
                     {
                       "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
+                      "type": "boolean",
                       "name": "has_pages",
                       "description": "",
                       "isRequired": true
@@ -108468,6 +108327,12 @@
                       "description": "<p>Whether discussions are enabled.</p>",
                       "isRequired": true,
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "string or null",
@@ -110741,6 +110606,12 @@
                       "default": false
                     },
                     {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
                       "type": "string or null",
                       "name": "homepage",
                       "description": "",
@@ -111731,6 +111602,12 @@
                       "description": "<p>Whether discussions are enabled.</p>",
                       "isRequired": true,
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "string or null",
@@ -115009,6 +114886,12 @@
                     },
                     {
                       "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
+                      "type": "boolean",
                       "name": "archived",
                       "description": "<p>Whether the repository is archived.</p>",
                       "isRequired": true,
@@ -115973,6 +115856,12 @@
                       "name": "has_discussions",
                       "description": "<p>Whether discussions are enabled.</p>",
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "boolean",
@@ -118664,6 +118553,12 @@
                     },
                     {
                       "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
+                      "type": "boolean",
                       "name": "archived",
                       "description": "<p>Whether the repository is archived.</p>",
                       "isRequired": true,
@@ -119628,6 +119523,12 @@
                       "name": "has_discussions",
                       "description": "<p>Whether discussions are enabled.</p>",
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "boolean",
@@ -121547,6 +121448,12 @@
                       "default": false
                     },
                     {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
                       "type": "string or null",
                       "name": "homepage",
                       "description": "",
@@ -122537,6 +122444,12 @@
                       "description": "<p>Whether discussions are enabled.</p>",
                       "isRequired": true,
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "string or null",
@@ -125879,6 +125792,12 @@
                     },
                     {
                       "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
+                      "type": "boolean",
                       "name": "archived",
                       "description": "<p>Whether the repository is archived.</p>",
                       "isRequired": true,
@@ -126843,6 +126762,12 @@
                       "name": "has_discussions",
                       "description": "<p>Whether discussions are enabled.</p>",
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "boolean",
@@ -128579,6 +128504,12 @@
                       "default": false
                     },
                     {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
                       "type": "string or null",
                       "name": "homepage",
                       "description": "",
@@ -129569,6 +129500,12 @@
                       "description": "<p>Whether discussions are enabled.</p>",
                       "isRequired": true,
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "string or null",
@@ -131837,6 +131774,12 @@
                       "default": false
                     },
                     {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
                       "type": "string or null",
                       "name": "homepage",
                       "description": "",
@@ -132827,6 +132770,12 @@
                       "description": "<p>Whether discussions are enabled.</p>",
                       "isRequired": true,
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "string or null",
@@ -135327,6 +135276,12 @@
                       "default": false
                     },
                     {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
                       "type": "string or null",
                       "name": "homepage",
                       "description": "",
@@ -136317,6 +136272,12 @@
                       "description": "<p>Whether discussions are enabled.</p>",
                       "isRequired": true,
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "string or null",
@@ -139589,6 +139550,12 @@
                     },
                     {
                       "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
+                      "type": "boolean",
                       "name": "archived",
                       "description": "<p>Whether the repository is archived.</p>",
                       "isRequired": true,
@@ -140553,6 +140520,12 @@
                       "name": "has_discussions",
                       "description": "<p>Whether discussions are enabled.</p>",
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "boolean",
@@ -143244,6 +143217,12 @@
                     },
                     {
                       "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
+                      "type": "boolean",
                       "name": "archived",
                       "description": "<p>Whether the repository is archived.</p>",
                       "isRequired": true,
@@ -144208,6 +144187,12 @@
                       "name": "has_discussions",
                       "description": "<p>Whether discussions are enabled.</p>",
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "boolean",
@@ -146899,6 +146884,12 @@
                     },
                     {
                       "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
+                      "type": "boolean",
                       "name": "archived",
                       "description": "<p>Whether the repository is archived.</p>",
                       "isRequired": true,
@@ -147863,6 +147854,12 @@
                       "name": "has_discussions",
                       "description": "<p>Whether discussions are enabled.</p>",
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "boolean",
@@ -149549,6 +149546,12 @@
                       "default": false
                     },
                     {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
                       "type": "string or null",
                       "name": "homepage",
                       "description": "",
@@ -150539,6 +150542,12 @@
                       "description": "<p>Whether discussions are enabled.</p>",
                       "isRequired": true,
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "string or null",
@@ -153103,6 +153112,12 @@
                       "default": false
                     },
                     {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
                       "type": "string or null",
                       "name": "homepage",
                       "description": "",
@@ -154093,6 +154108,12 @@
                       "description": "<p>Whether discussions are enabled.</p>",
                       "isRequired": true,
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "string or null",
@@ -156656,6 +156677,12 @@
                       "default": false
                     },
                     {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
                       "type": "string or null",
                       "name": "homepage",
                       "description": "",
@@ -157646,6 +157673,12 @@
                       "description": "<p>Whether discussions are enabled.</p>",
                       "isRequired": true,
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "string or null",
@@ -160040,6 +160073,12 @@
                       "default": false
                     },
                     {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
                       "type": "string or null",
                       "name": "homepage",
                       "description": "",
@@ -161030,6 +161069,12 @@
                       "description": "<p>Whether discussions are enabled.</p>",
                       "isRequired": true,
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "string or null",
@@ -163348,6 +163393,12 @@
                       "default": false
                     },
                     {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
                       "type": "string or null",
                       "name": "homepage",
                       "description": "",
@@ -164338,6 +164389,12 @@
                       "description": "<p>Whether discussions are enabled.</p>",
                       "isRequired": true,
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "string or null",
@@ -166605,6 +166662,12 @@
                       "default": false
                     },
                     {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
                       "type": "string or null",
                       "name": "homepage",
                       "description": "",
@@ -167595,6 +167658,12 @@
                       "description": "<p>Whether discussions are enabled.</p>",
                       "isRequired": true,
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "string or null",
@@ -169858,6 +169927,12 @@
                       "default": false
                     },
                     {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
                       "type": "string or null",
                       "name": "homepage",
                       "description": "",
@@ -170826,6 +170901,12 @@
                       "name": "has_discussions",
                       "description": "<p>Whether discussions are enabled.</p>",
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "string or null",
@@ -172934,6 +173015,12 @@
                       "default": false
                     },
                     {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
                       "type": "string or null",
                       "name": "homepage",
                       "description": "",
@@ -173903,6 +173990,12 @@
                       "description": "<p>Whether discussions are enabled.</p>",
                       "isRequired": true,
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "string or null",
@@ -176032,6 +176125,12 @@
                       "default": false
                     },
                     {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
                       "type": "string or null",
                       "name": "homepage",
                       "description": "",
@@ -177001,6 +177100,12 @@
                       "description": "<p>Whether discussions are enabled.</p>",
                       "isRequired": true,
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "string or null",
@@ -179105,6 +179210,12 @@
                       "default": false
                     },
                     {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
                       "type": "string or null",
                       "name": "homepage",
                       "description": "",
@@ -180075,6 +180186,12 @@
                       "description": "<p>Whether discussions are enabled.</p>",
                       "isRequired": true,
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "string or null",
@@ -185642,6 +185759,12 @@
                       "default": false
                     },
                     {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
                       "type": "string or null",
                       "name": "homepage",
                       "description": "",
@@ -186612,6 +186735,12 @@
                       "description": "<p>Whether discussions are enabled.</p>",
                       "isRequired": true,
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "string or null",
@@ -188954,6 +189083,12 @@
                       "default": false
                     },
                     {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
                       "type": "string or null",
                       "name": "homepage",
                       "description": "",
@@ -189880,6 +190015,12 @@
                       "description": "<p>Whether discussions are enabled.</p>",
                       "isRequired": true,
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "string or null",
@@ -192374,6 +192515,12 @@
                       "default": false
                     },
                     {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
+                    },
+                    {
                       "type": "string or null",
                       "name": "homepage",
                       "description": "",
@@ -193300,6 +193447,12 @@
                       "description": "<p>Whether discussions are enabled.</p>",
                       "isRequired": true,
                       "default": false
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "has_pull_requests",
+                      "description": "<p>Whether pull requests are enabled.</p>",
+                      "default": true
                     },
                     {
                       "type": "string or null",
@@ -202014,7 +202167,7 @@
                 {
                   "type": "integer or null",
                   "name": "actor_id",
-                  "description": "<p>The ID of the actor that can bypass a ruleset. Required for <code>Integration</code>, <code>RepositoryRole</code>, and <code>Team</code> actor types. If <code>actor_type</code> is <code>OrganizationAdmin</code>, this should be <code>1</code>. If <code>actor_type</code> is <code>DeployKey</code>, this should be null. <code>OrganizationAdmin</code> is not applicable for personal repositories.</p>"
+                  "description": "<p>The ID of the actor that can bypass a ruleset. Required for <code>Integration</code>, <code>RepositoryRole</code>, and <code>Team</code> actor types. If <code>actor_type</code> is <code>OrganizationAdmin</code>, <code>actor_id</code> is ignored. If <code>actor_type</code> is <code>DeployKey</code>, this should be null. <code>OrganizationAdmin</code> is not applicable for personal repositories.</p>"
                 },
                 {
                   "type": "string",
@@ -202405,7 +202558,7 @@
                         {
                           "type": "string",
                           "name": "name",
-                          "description": "<p>How this rule will appear to users.</p>"
+                          "description": "<p>How this rule appears when configuring it.</p>"
                         },
                         {
                           "type": "boolean",
@@ -202456,7 +202609,7 @@
                         {
                           "type": "string",
                           "name": "name",
-                          "description": "<p>How this rule will appear to users.</p>"
+                          "description": "<p>How this rule appears when configuring it.</p>"
                         },
                         {
                           "type": "boolean",
@@ -202507,7 +202660,7 @@
                         {
                           "type": "string",
                           "name": "name",
-                          "description": "<p>How this rule will appear to users.</p>"
+                          "description": "<p>How this rule appears when configuring it.</p>"
                         },
                         {
                           "type": "boolean",
@@ -202558,7 +202711,7 @@
                         {
                           "type": "string",
                           "name": "name",
-                          "description": "<p>How this rule will appear to users.</p>"
+                          "description": "<p>How this rule appears when configuring it.</p>"
                         },
                         {
                           "type": "boolean",
@@ -202609,7 +202762,7 @@
                         {
                           "type": "string",
                           "name": "name",
-                          "description": "<p>How this rule will appear to users.</p>"
+                          "description": "<p>How this rule appears when configuring it.</p>"
                         },
                         {
                           "type": "boolean",
@@ -202896,7 +203049,7 @@
                 {
                   "type": "integer or null",
                   "name": "actor_id",
-                  "description": "<p>The ID of the actor that can bypass a ruleset. Required for <code>Integration</code>, <code>RepositoryRole</code>, and <code>Team</code> actor types. If <code>actor_type</code> is <code>OrganizationAdmin</code>, this should be <code>1</code>. If <code>actor_type</code> is <code>DeployKey</code>, this should be null. <code>OrganizationAdmin</code> is not applicable for personal repositories.</p>"
+                  "description": "<p>The ID of the actor that can bypass a ruleset. Required for <code>Integration</code>, <code>RepositoryRole</code>, and <code>Team</code> actor types. If <code>actor_type</code> is <code>OrganizationAdmin</code>, <code>actor_id</code> is ignored. If <code>actor_type</code> is <code>DeployKey</code>, this should be null. <code>OrganizationAdmin</code> is not applicable for personal repositories.</p>"
                 },
                 {
                   "type": "string",
@@ -203287,7 +203440,7 @@
                         {
                           "type": "string",
                           "name": "name",
-                          "description": "<p>How this rule will appear to users.</p>"
+                          "description": "<p>How this rule appears when configuring it.</p>"
                         },
                         {
                           "type": "boolean",
@@ -203338,7 +203491,7 @@
                         {
                           "type": "string",
                           "name": "name",
-                          "description": "<p>How this rule will appear to users.</p>"
+                          "description": "<p>How this rule appears when configuring it.</p>"
                         },
                         {
                           "type": "boolean",
@@ -203389,7 +203542,7 @@
                         {
                           "type": "string",
                           "name": "name",
-                          "description": "<p>How this rule will appear to users.</p>"
+                          "description": "<p>How this rule appears when configuring it.</p>"
                         },
                         {
                           "type": "boolean",
@@ -203440,7 +203593,7 @@
                         {
                           "type": "string",
                           "name": "name",
-                          "description": "<p>How this rule will appear to users.</p>"
+                          "description": "<p>How this rule appears when configuring it.</p>"
                         },
                         {
                           "type": "boolean",
@@ -203491,7 +203644,7 @@
                         {
                           "type": "string",
                           "name": "name",
-                          "description": "<p>How this rule will appear to users.</p>"
+                          "description": "<p>How this rule appears when configuring it.</p>"
                         },
                         {
                           "type": "boolean",
@@ -203778,7 +203931,7 @@
                 {
                   "type": "integer or null",
                   "name": "actor_id",
-                  "description": "<p>The ID of the actor that can bypass a ruleset. Required for <code>Integration</code>, <code>RepositoryRole</code>, and <code>Team</code> actor types. If <code>actor_type</code> is <code>OrganizationAdmin</code>, this should be <code>1</code>. If <code>actor_type</code> is <code>DeployKey</code>, this should be null. <code>OrganizationAdmin</code> is not applicable for personal repositories.</p>"
+                  "description": "<p>The ID of the actor that can bypass a ruleset. Required for <code>Integration</code>, <code>RepositoryRole</code>, and <code>Team</code> actor types. If <code>actor_type</code> is <code>OrganizationAdmin</code>, <code>actor_id</code> is ignored. If <code>actor_type</code> is <code>DeployKey</code>, this should be null. <code>OrganizationAdmin</code> is not applicable for personal repositories.</p>"
                 },
                 {
                   "type": "string",
@@ -204169,7 +204322,7 @@
                         {
                           "type": "string",
                           "name": "name",
-                          "description": "<p>How this rule will appear to users.</p>"
+                          "description": "<p>How this rule appears when configuring it.</p>"
                         },
                         {
                           "type": "boolean",
@@ -204220,7 +204373,7 @@
                         {
                           "type": "string",
                           "name": "name",
-                          "description": "<p>How this rule will appear to users.</p>"
+                          "description": "<p>How this rule appears when configuring it.</p>"
                         },
                         {
                           "type": "boolean",
@@ -204271,7 +204424,7 @@
                         {
                           "type": "string",
                           "name": "name",
-                          "description": "<p>How this rule will appear to users.</p>"
+                          "description": "<p>How this rule appears when configuring it.</p>"
                         },
                         {
                           "type": "boolean",
@@ -204322,7 +204475,7 @@
                         {
                           "type": "string",
                           "name": "name",
-                          "description": "<p>How this rule will appear to users.</p>"
+                          "description": "<p>How this rule appears when configuring it.</p>"
                         },
                         {
                           "type": "boolean",
@@ -204373,7 +204526,7 @@
                         {
                           "type": "string",
                           "name": "name",
-                          "description": "<p>How this rule will appear to users.</p>"
+                          "description": "<p>How this rule appears when configuring it.</p>"
                         },
                         {
                           "type": "boolean",
@@ -205026,7 +205179,7 @@
                             {
                               "type": "string",
                               "name": "name",
-                              "description": "<p>How this rule will appear to users.</p>"
+                              "description": "<p>How this rule appears when configuring it.</p>"
                             },
                             {
                               "type": "boolean",
@@ -205077,7 +205230,7 @@
                             {
                               "type": "string",
                               "name": "name",
-                              "description": "<p>How this rule will appear to users.</p>"
+                              "description": "<p>How this rule appears when configuring it.</p>"
                             },
                             {
                               "type": "boolean",
@@ -205128,7 +205281,7 @@
                             {
                               "type": "string",
                               "name": "name",
-                              "description": "<p>How this rule will appear to users.</p>"
+                              "description": "<p>How this rule appears when configuring it.</p>"
                             },
                             {
                               "type": "boolean",
@@ -205179,7 +205332,7 @@
                             {
                               "type": "string",
                               "name": "name",
-                              "description": "<p>How this rule will appear to users.</p>"
+                              "description": "<p>How this rule appears when configuring it.</p>"
                             },
                             {
                               "type": "boolean",
@@ -205230,7 +205383,7 @@
                             {
                               "type": "string",
                               "name": "name",
-                              "description": "<p>How this rule will appear to users.</p>"
+                              "description": "<p>How this rule appears when configuring it.</p>"
                             },
                             {
                               "type": "boolean",
@@ -205695,7 +205848,7 @@
                             {
                               "type": "string",
                               "name": "name",
-                              "description": "<p>How this rule will appear to users.</p>"
+                              "description": "<p>How this rule appears when configuring it.</p>"
                             },
                             {
                               "type": "boolean",
@@ -205746,7 +205899,7 @@
                             {
                               "type": "string",
                               "name": "name",
-                              "description": "<p>How this rule will appear to users.</p>"
+                              "description": "<p>How this rule appears when configuring it.</p>"
                             },
                             {
                               "type": "boolean",
@@ -205797,7 +205950,7 @@
                             {
                               "type": "string",
                               "name": "name",
-                              "description": "<p>How this rule will appear to users.</p>"
+                              "description": "<p>How this rule appears when configuring it.</p>"
                             },
                             {
                               "type": "boolean",
@@ -205848,7 +206001,7 @@
                             {
                               "type": "string",
                               "name": "name",
-                              "description": "<p>How this rule will appear to users.</p>"
+                              "description": "<p>How this rule appears when configuring it.</p>"
                             },
                             {
                               "type": "boolean",
@@ -205899,7 +206052,7 @@
                             {
                               "type": "string",
                               "name": "name",
-                              "description": "<p>How this rule will appear to users.</p>"
+                              "description": "<p>How this rule appears when configuring it.</p>"
                             },
                             {
                               "type": "boolean",
@@ -206369,7 +206522,7 @@
                                 {
                                   "type": "string",
                                   "name": "name",
-                                  "description": "<p>How this rule will appear to users.</p>"
+                                  "description": "<p>How this rule appears when configuring it.</p>"
                                 },
                                 {
                                   "type": "boolean",
@@ -206420,7 +206573,7 @@
                                 {
                                   "type": "string",
                                   "name": "name",
-                                  "description": "<p>How this rule will appear to users.</p>"
+                                  "description": "<p>How this rule appears when configuring it.</p>"
                                 },
                                 {
                                   "type": "boolean",
@@ -206471,7 +206624,7 @@
                                 {
                                   "type": "string",
                                   "name": "name",
-                                  "description": "<p>How this rule will appear to users.</p>"
+                                  "description": "<p>How this rule appears when configuring it.</p>"
                                 },
                                 {
                                   "type": "boolean",
@@ -206522,7 +206675,7 @@
                                 {
                                   "type": "string",
                                   "name": "name",
-                                  "description": "<p>How this rule will appear to users.</p>"
+                                  "description": "<p>How this rule appears when configuring it.</p>"
                                 },
                                 {
                                   "type": "boolean",
@@ -206573,7 +206726,7 @@
                                 {
                                   "type": "string",
                                   "name": "name",
-                                  "description": "<p>How this rule will appear to users.</p>"
+                                  "description": "<p>How this rule appears when configuring it.</p>"
                                 },
                                 {
                                   "type": "boolean",
@@ -207025,6 +207178,7 @@
               "description": "",
               "isRequired": true,
               "enum": [
+                "auto_dismissed",
                 "open"
               ]
             }
@@ -207602,6 +207756,7 @@
               "description": "",
               "isRequired": true,
               "enum": [
+                "auto_dismissed",
                 "open"
               ]
             }
